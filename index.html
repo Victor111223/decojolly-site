@@ -1,76 +1,347 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DECOJOLLY | Holiday & Seasonal Decor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECOJOLLY — Holiday & Seasonal Decor Supply Chain Partner</title>
+  <meta name="description" content="DECOJOLLY provides sourcing, QC, and distribution support for holiday & seasonal decor in the U.S. market." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    :root{
+      --bg:#070b12;
+      --panel:#0b1220;
+      --panel2:#0e172a;
+      --text:#e8eefc;
+      --muted:#9fb0d1;
+      --gold:#d6b25e;
+      --gold2:#b8943c;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 10px 40px rgba(0,0,0,.55);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0; font-family: Arial, Helvetica, sans-serif;
-      background:#0b1220; color:#eaf0ff;
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(214,178,94,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 20%, rgba(140,170,255,.16), transparent 55%),
+        linear-gradient(180deg, var(--bg), #04060b 65%);
+      color:var(--text);
     }
-    .wrap{max-width:980px;margin:0 auto;padding:48px 18px;}
-    .card{
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px;
-      padding:22px;
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 60px}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:10px 0 24px;
     }
-    h1{margin:0 0 10px; font-size:38px; line-height:1.05;}
-    p{margin:10px 0; color:#b9c6e6; line-height:1.7;}
+    .brand{
+      display:flex;align-items:center;gap:12px;
+      letter-spacing:.12em;text-transform:uppercase;font-weight:800;
+    }
+    .mark{
+      width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg, rgba(214,178,94,.95), rgba(140,170,255,.25));
+      box-shadow: 0 0 0 1px rgba(214,178,94,.35) inset, var(--shadow);
+    }
+    .nav{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-weight:600}
+    .nav a{padding:8px 10px;border-radius:12px;border:1px solid transparent}
+    .nav a:hover{border-color:var(--border);background:rgba(255,255,255,.04);color:var(--text)}
+
+    .hero{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:34px 26px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;inset:-2px;
+      background:radial-gradient(600px 260px at 18% 18%, rgba(214,178,94,.18), transparent 55%);
+      pointer-events:none;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:22px;
+      position:relative;
+    }
+    @media(max-width:920px){ .heroGrid{grid-template-columns:1fr} }
+    h1{
+      margin:0 0 10px;
+      font-size:44px;line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:0 0 18px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.7;
+      max-width:62ch;
+    }
+    .pillRow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
+    .pill{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      padding:8px 12px;border-radius:999px;
+      font-weight:600;font-size:13px;
+    }
+    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
     .btn{
-      display:inline-block; margin-top:14px;
-      padding:12px 16px; border-radius:12px;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.10);
-      color:#eaf0ff; text-decoration:none; font-weight:700;
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 14px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      font-weight:700;
     }
-    .btn:hover{background:rgba(255,255,255,.14);}
-    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px;}
-    .box{
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
+    .btn:hover{background:rgba(255,255,255,.06)}
+    .btnGold{
+      border-color:rgba(214,178,94,.55);
+      background:linear-gradient(180deg, rgba(214,178,94,.25), rgba(214,178,94,.12));
+    }
+    .btnGold:hover{background:linear-gradient(180deg, rgba(214,178,94,.30), rgba(214,178,94,.14))}
+    .cardStack{
+      display:grid;gap:12px;
+    }
+    .miniCard{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(11,18,32,.85), rgba(14,23,42,.75));
       border-radius:16px;
-      padding:14px;
+      padding:14px 14px;
     }
-    .box h3{margin:0 0 6px; font-size:15px;}
-    .box div{color:#b9c6e6; font-size:13px; line-height:1.6;}
-    .footer{margin-top:24px; color:#7f8db8; font-size:12px;}
-    @media(max-width:860px){.grid{grid-template-columns:1fr}}
+    .miniTitle{font-weight:800;margin:0 0 6px}
+    .miniText{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+
+    .section{margin-top:22px}
+    .sectionHead{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
+      margin:18px 0 10px;
+    }
+    .sectionHead h2{margin:0;font-size:18px;letter-spacing:.02em}
+    .sectionHead p{margin:0;color:var(--muted);font-size:13px}
+
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media(max-width:900px){ .grid3{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border-radius:16px;
+      padding:16px 16px;
+      min-height:120px;
+    }
+    .card h3{margin:0 0 8px;font-size:15px}
+    .card p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+
+    .split{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media(max-width:900px){ .split{grid-template-columns:1fr} }
+
+    .kpis{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px;
+    }
+    @media(max-width:900px){ .kpis{grid-template-columns:1fr} }
+    .kpi{
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(214,178,94,.12), rgba(255,255,255,.02));
+      border-radius:16px;
+      padding:14px 14px;
+    }
+    .kpi b{display:block;font-size:14px}
+    .kpi span{display:block;color:var(--muted);margin-top:6px;font-size:13px;line-height:1.55}
+
+    .footer{
+      margin-top:26px;
+      color:rgba(159,176,209,.75);
+      font-size:12px;
+      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+      padding-top:16px;border-top:1px solid var(--border);
+    }
+    .goldLine{
+      height:1px;width:100%;
+      background:linear-gradient(90deg, transparent, rgba(214,178,94,.8), transparent);
+      margin:14px 0;
+      opacity:.9;
+    }
+    .note{
+      color:rgba(214,178,94,.95);
+      font-weight:800;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      font-size:12px;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-    <div class="card">
-      <h1>DECOJOLLY</h1>
-      <p>
-        Holiday & seasonal decor supply chain partner — sourcing, quality control,
-        and distribution support for the U.S. market.
-      </p>
+    <header class="top">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>DECOJOLLY</div>
+      </div>
 
-      <a class="btn" href="assets/docs/company-profile.pdf" target="_blank">
-        📄 Open / Download Company Profile (PDF)
-      </a>
+      <nav class="nav">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#model">Business Model</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <div class="grid">
-        <div class="box">
-          <h3>Supply Chain</h3>
-          <div>Stable production, QC workflow, and traceable delivery.</div>
+    <main class="hero">
+      <div class="heroGrid">
+        <div>
+          <div class="note">Holiday & Seasonal Decor</div>
+          <h1>Supply Chain Partner for the U.S. Market</h1>
+          <p class="sub">
+            We help retailers and distributors source high-quality seasonal products with consistent production,
+            strict quality control, and reliable delivery coordination — from factory to U.S. warehouses.
+          </p>
+
+          <div class="pillRow">
+            <div class="pill">Sourcing & Negotiation</div>
+            <div class="pill">QC Workflow</div>
+            <div class="pill">Packaging & Compliance</div>
+            <div class="pill">U.S. Distribution Support</div>
+          </div>
+
+          <div class="ctaRow">
+            <!-- ✅ 把你的PDF放到仓库根目录或 assets/ 里，然后改这个链接 -->
+            <a class="btn btnGold" href="assets/docs/company-profile.pdf" target="_blank" rel="noopener">
+  Open / Download Company Profile (PDF)
+</a>
+            </a>
+            <!-- ✅ 把邮箱改成你公司的邮箱 -->
+            <a class="btn" href="mailto:decojolly.info@gmail.com">
+  Email: decojolly.info@gmail.com
+</a>
+
+          </div>
         </div>
-        <div class="box">
-          <h3>Product Portfolio</h3>
-          <div>Glass ornaments, seasonal collections, custom packaging.</div>
-        </div>
-        <div class="box">
-          <h3>Business Model</h3>
-          <div>Purchase & distribution (not commission-based).</div>
+
+        <div class="cardStack">
+          <div class="miniCard">
+            <p class="miniTitle">What we deliver</p>
+            <p class="miniText">Stable production • traceable QC • predictable lead time • transparent communication.</p>
+          </div>
+          <div class="miniCard">
+            <p class="miniTitle">Ideal partners</p>
+            <p class="miniText">Retailers, importers, wholesalers, and brand owners seeking seasonal collections.</p>
+          </div>
+          <div class="miniCard">
+            <p class="miniTitle">Focus categories</p>
+            <p class="miniText">Holiday ornaments • seasonal décor • customized collections • gift-ready packaging.</p>
+          </div>
         </div>
       </div>
 
-      <div class="footer">
-        © <span id="y"></span> DECOJOLLY. All rights reserved.
+      <div class="goldLine"></div>
+
+      <div class="kpis">
+        <div class="kpi">
+          <b>Quality Control</b>
+          <span>Incoming material checks, in-process inspection, and pre-shipment review.</span>
+        </div>
+        <div class="kpi">
+          <b>Customization</b>
+          <span>Design adaptation, custom packaging, labeling, and seasonal collections.</span>
+        </div>
+        <div class="kpi">
+          <b>Coordination</b>
+          <span>Production timeline alignment, shipment planning, and U.S. delivery support.</span>
+        </div>
       </div>
-    </div>
+    </main>
+
+    <section class="section" id="capabilities">
+      <div class="sectionHead">
+        <h2>Capabilities</h2>
+        <p>End-to-end support — from sourcing to delivery</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <h3>Sourcing & Supply Planning</h3>
+          <p>Factory coordination, product selection, pricing alignment, and production planning to meet seasonal demand.</p>
+        </div>
+        <div class="card">
+          <h3>Quality Control & Traceability</h3>
+          <p>Defined QC workflow, photo/video confirmation when needed, and issue tracking for consistent standards.</p>
+        </div>
+        <div class="card">
+          <h3>Packaging & Compliance</h3>
+          <p>Gift-ready packaging, labeling support, carton marks, and basic compliance coordination for export.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="sectionHead">
+        <h2>Product Portfolio</h2>
+        <p>Seasonal collections and custom programs</p>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>Holiday Ornaments</h3>
+          <p>Curated collections for Christmas and major seasonal moments — designed for retail presentation and sell-through.</p>
+        </div>
+        <div class="card">
+          <h3>Seasonal Decor</h3>
+          <p>Home décor items for key seasons, with options for private label, custom packaging, and assortment building.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="model">
+      <div class="sectionHead">
+        <h2>Business Model</h2>
+        <p>Purchase & distribution (not commission-based)</p>
+      </div>
+      <div class="card">
+        <h3>How we work</h3>
+        <p>
+          We purchase directly from the factory and distribute into the U.S. market. This model improves execution
+          speed and accountability across production, QC, and delivery coordination.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="sectionHead">
+        <h2>Contact</h2>
+        <p>Let’s discuss sourcing, QC, and distribution</p>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:info@decojolly.com">info@decojolly.com</a></p>
+          <p style="margin-top:8px;color:var(--muted)">Response time: typically within 24 hours (business days).</p>
+        </div>
+        <div class="card">
+          <h3>Company</h3>
+          <p>DECOJOLLY</p>
+          <p style="margin-top:8px;color:var(--muted)">
+            Holiday & seasonal decor supply chain partner — sourcing, quality control, and distribution support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> DECOJOLLY. All rights reserved.</div>
+      <div>Built on GitHub Pages • Secure via HTTPS</div>
+    </footer>
   </div>
 
   <script>
