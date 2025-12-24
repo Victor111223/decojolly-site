@@ -1,19 +1,80 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DECOJOLLY</title>
+  <title>DECOJOLLY | Holiday & Seasonal Decor</title>
+  <style>
+    body{
+      margin:0; font-family: Arial, Helvetica, sans-serif;
+      background:#0b1220; color:#eaf0ff;
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:48px 18px;}
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:22px;
+    }
+    h1{margin:0 0 10px; font-size:38px; line-height:1.05;}
+    p{margin:10px 0; color:#b9c6e6; line-height:1.7;}
+    .btn{
+      display:inline-block; margin-top:14px;
+      padding:12px 16px; border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.10);
+      color:#eaf0ff; text-decoration:none; font-weight:700;
+    }
+    .btn:hover{background:rgba(255,255,255,.14);}
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px;}
+    .box{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      padding:14px;
+    }
+    .box h3{margin:0 0 6px; font-size:15px;}
+    .box div{color:#b9c6e6; font-size:13px; line-height:1.6;}
+    .footer{margin-top:24px; color:#7f8db8; font-size:12px;}
+    @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  </style>
 </head>
-<body style="font-family:Arial, sans-serif; padding:40px;">
-  <h1>DECOJOLLY 官网（测试版）</h1>
-  <p>如果你能看到这行字，说明网站已经成功放到 GitHub。</p>
- <p>
-  <a href="assets/docs/company-profile.pdf" target="_blank"
-     style="display:inline-block;padding:12px 16px;border:1px solid #ddd;border-radius:10px;text-decoration:none;">
-    📄 下载/预览：公司介绍 Company Profile (PDF)
-  </a>
-</p>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>DECOJOLLY</h1>
+      <p>
+        Holiday & seasonal decor supply chain partner — sourcing, quality control,
+        and distribution support for the U.S. market.
+      </p>
 
+      <a class="btn" href="assets/docs/company-profile.pdf" target="_blank">
+        📄 Open / Download Company Profile (PDF)
+      </a>
+
+      <div class="grid">
+        <div class="box">
+          <h3>Supply Chain</h3>
+          <div>Stable production, QC workflow, and traceable delivery.</div>
+        </div>
+        <div class="box">
+          <h3>Product Portfolio</h3>
+          <div>Glass ornaments, seasonal collections, custom packaging.</div>
+        </div>
+        <div class="box">
+          <h3>Business Model</h3>
+          <div>Purchase & distribution (not commission-based).</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        © <span id="y"></span> DECOJOLLY. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
