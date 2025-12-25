@@ -2,309 +2,1027 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DECOJOLLY — U.S. Import Partner for Holiday & Seasonal Decor</title>
-  <meta name="description" content="DECOJOLLY sources, quality-checks, and coordinates delivery of holiday & seasonal decor from factory to U.S. warehouses—built for retail timelines and consistent standards." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DecoJolly — Import partner for holiday & seasonal décor. Glass ornaments, giftable crafts, and curated collections for wholesale buyers." />
+  <title>DecoJolly | Holiday & Seasonal Import Partner</title>
 
   <style>
     :root{
-      --bg:#071225;
-      --panel:#0b1b33;
-      --panel2:#0e2546;
-      --text:#ecf3ff;
-      --muted:#b6c7e8;
-      --gold:#e4c77a;
-      --green:#49c39e;
-      --border:rgba(255,255,255,.14);
-      --shadow: 0 16px 60px rgba(0,0,0,.45);
-      --radius:22px;
-      --radius2:26px;
+      --bg: #fbfbf7;
+      --panel: rgba(255,255,255,.78);
+      --panel2: rgba(255,255,255,.9);
+      --text: #0b1b12;
+      --muted: rgba(11,27,18,.70);
+      --line: rgba(11,27,18,.12);
+
+      --green-900:#062016;
+      --green-800:#083023;
+      --green-700:#0b3d2e;
+      --green-600:#0f4d38;
+      --gold-600:#b68d2c;
+      --gold-500:#c9a24a;
+      --gold-400:#e1c47d;
+
+      --shadow: 0 18px 60px rgba(6,32,22,.12);
+      --shadow2: 0 10px 30px rgba(6,32,22,.10);
+
+      --radius-xl: 26px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+
+      --max: 1140px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
       background:
-        radial-gradient(900px 520px at 18% 12%, rgba(228,199,122,.22), transparent 60%),
-        radial-gradient(900px 520px at 86% 10%, rgba(73,195,158,.14), transparent 55%),
-        radial-gradient(900px 520px at 70% 70%, rgba(120,160,255,.12), transparent 60%),
-        linear-gradient(180deg, var(--bg), #040a16 70%);
+        radial-gradient(1200px 800px at 20% -10%, rgba(201,162,74,.20), transparent 55%),
+        radial-gradient(900px 700px at 90% 0%, rgba(15,77,56,.16), transparent 52%),
+        radial-gradient(800px 600px at 30% 110%, rgba(11,61,46,.14), transparent 50%),
+        linear-gradient(180deg, #ffffff, var(--bg));
+      overflow-x:hidden;
     }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1120px;margin:0 auto;padding:26px 18px 64px}
-    .top{
-      display:flex;align-items:center;justify-content:space-between;gap:14px;
-      padding:10px 0 22px;
+
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+
+    .container{ width:min(var(--max), calc(100% - 40px)); margin:0 auto; }
+
+    /* Top strip */
+    .topbar{
+      position:relative;
+      border-bottom: 1px solid rgba(11,27,18,.08);
+      background: rgba(255,255,255,.6);
+      backdrop-filter: blur(10px);
     }
-    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
-    .mark{
-      width:40px;height:40px;border-radius:14px;
-      background:linear-gradient(135deg, rgba(228,199,122,.95), rgba(73,195,158,.18));
-      box-shadow: 0 0 0 1px rgba(228,199,122,.35) inset, var(--shadow);
+    .topbar-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:10px 0;
+      gap:16px;
+      font-size:13px;
+      color: var(--muted);
     }
-    .nav{display:flex;gap:10px;flex-wrap:wrap;color:rgba(182,199,232,.92);font-weight:700}
-    .nav a{
-      padding:9px 12px;border-radius:14px;border:1px solid transparent;
-      background:transparent;
+    .topbar-left, .topbar-right{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px;
+      border:1px solid rgba(11,27,18,.10);
+      border-radius:999px;
+      background: rgba(255,255,255,.7);
     }
-    .nav a:hover{border-color:var(--border);background:rgba(255,255,255,.05);color:var(--text)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:12px 14px;border-radius:16px;border:1px solid var(--border);
-      background:rgba(255,255,255,.05);
-      font-weight:900;
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(180deg, var(--gold-500), var(--gold-600));
+      box-shadow: 0 0 0 4px rgba(201,162,74,.18);
     }
-    .btn:hover{background:rgba(255,255,255,.07)}
-    .btnGold{
-      border-color:rgba(228,199,122,.6);
-      background:linear-gradient(180deg, rgba(228,199,122,.22), rgba(255,255,255,.04));
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(255,255,255,.62);
+      border-bottom: 1px solid rgba(11,27,18,.08);
+      backdrop-filter: blur(12px);
     }
-    .btnGold:hover{background:linear-gradient(180deg, rgba(228,199,122,.26), rgba(255,255,255,.05))}
-    .hero{
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border-radius:var(--radius2);
-      box-shadow: var(--shadow);
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 200px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background:
+        radial-gradient(16px 16px at 30% 30%, rgba(255,255,255,.7), transparent 60%),
+        linear-gradient(135deg, var(--green-700), var(--green-900));
+      box-shadow: 0 12px 28px rgba(11,61,46,.22);
+      position:relative;
       overflow:hidden;
     }
-    .heroGrid{
+    .logo::after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle, rgba(201,162,74,.55), transparent 55%);
+      transform: rotate(18deg);
+      opacity:.55;
+    }
+    .brand-text{
+      display:flex; flex-direction:column; line-height:1.1;
+    }
+    .brand-text strong{ font-size:16px; letter-spacing:.2px; }
+    .brand-text span{ font-size:12px; color:var(--muted); }
+
+    .nav-links{
+      display:flex; align-items:center; gap:18px;
+    }
+    .nav-links a{
+      font-size:14px;
+      color: rgba(11,27,18,.78);
+      padding:10px 10px;
+      border-radius:12px;
+      transition: all .2s ease;
+    }
+    .nav-links a:hover{
+      background: rgba(11,61,46,.06);
+      color: rgba(11,27,18,.92);
+    }
+
+    .nav-actions{
+      display:flex; align-items:center; gap:10px;
+      min-width: 260px;
+      justify-content:flex-end;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius: 14px;
+      font-weight: 650;
+      font-size:14px;
+      border: 1px solid rgba(11,27,18,.12);
+      background: rgba(255,255,255,.75);
+      box-shadow: 0 12px 30px rgba(6,32,22,.10);
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); box-shadow: 0 18px 46px rgba(6,32,22,.14); }
+    .btn:active{ transform: translateY(0px); }
+
+    .btn-primary{
+      border: 1px solid rgba(201,162,74,.55);
+      background: linear-gradient(135deg, rgba(11,61,46,.98), rgba(6,32,22,.98));
+      color: #fff;
+      box-shadow: 0 22px 70px rgba(11,61,46,.20);
+      position:relative;
+      overflow:hidden;
+    }
+    .btn-primary::after{
+      content:"";
+      position:absolute; inset:-60%;
+      background: radial-gradient(circle at 30% 30%, rgba(201,162,74,.65), transparent 55%);
+      opacity:.45;
+      transform: rotate(12deg);
+    }
+    .btn-primary span{ position:relative; z-index:1; }
+
+    .btn-ghost{
+      background: rgba(255,255,255,.55);
+      box-shadow:none;
+    }
+
+    .hamburger{
+      display:none;
+      width:44px; height:44px;
+      border-radius:14px;
+      border: 1px solid rgba(11,27,18,.12);
+      background: rgba(255,255,255,.75);
+      cursor:pointer;
+    }
+    .hamburger svg{ width:22px; height:22px; opacity:.8; }
+
+    /* Hero */
+    .hero{
+      padding: 54px 0 30px;
+      position:relative;
+    }
+    .hero-grid{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:14px;
-      padding:18px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 26px;
       align-items:stretch;
     }
-    @media(max-width:980px){ .heroGrid{grid-template-columns:1fr} }
-    .heroLeft{padding:8px 8px 14px 8px}
-    .badge{
-      display:inline-flex;align-items:center;gap:10px;
-      border:1px solid rgba(228,199,122,.35);
-      background:rgba(228,199,122,.10);
-      color:rgba(228,199,122,.98);
-      padding:8px 12px;border-radius:999px;
-      font-weight:900;font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    .hero-left{
+      border-radius: var(--radius-xl);
+      padding: 34px 32px;
+      background:
+        radial-gradient(900px 500px at 10% 0%, rgba(201,162,74,.22), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.64));
+      border:1px solid rgba(11,27,18,.10);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+      min-height: 420px;
     }
-    h1{margin:12px 0 10px;font-size:44px;line-height:1.06;letter-spacing:-.02em}
-    @media(max-width:980px){ h1{font-size:36px} }
-    .sub{margin:0 0 16px;color:rgba(182,199,232,.92);line-height:1.75;max-width:62ch}
-    .pillRow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 16px}
-    .pill{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:rgba(182,199,232,.92);
-      padding:8px 12px;border-radius:999px;
-      font-weight:800;font-size:13px;
+    .hero-left::before{
+      content:"";
+      position:absolute; inset:-30%;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(201,162,74,.22), transparent 55%),
+        radial-gradient(circle at 70% 60%, rgba(11,61,46,.14), transparent 58%);
+      transform: rotate(10deg);
+      opacity:.9;
+      pointer-events:none;
     }
-    .ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .heroRight{
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(11,27,51,.78), rgba(14,37,70,.62));
-      border-radius:22px;
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,162,74,.35);
+      background: rgba(255,255,255,.72);
+      color: rgba(11,27,18,.80);
+      font-weight: 650;
+      font-size: 13px;
+      position:relative;
+      z-index:1;
+    }
+    .kicker .spark{
+      width: 10px; height: 10px; border-radius: 999px;
+      background: linear-gradient(180deg, var(--gold-500), var(--gold-600));
+      box-shadow: 0 0 0 5px rgba(201,162,74,.15);
+    }
+
+    h1{
+      margin: 16px 0 12px;
+      font-size: clamp(34px, 4.2vw, 52px);
+      letter-spacing: -0.8px;
+      line-height: 1.06;
+      position:relative;
+      z-index:1;
+    }
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 54ch;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-ctas{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 18px;
+      position:relative;
+      z-index:1;
+    }
+
+    .trust-row{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 22px;
+      position:relative;
+      z-index:1;
+    }
+    .trust{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.68);
+      padding: 14px 14px;
+      box-shadow: var(--shadow2);
+    }
+    .trust strong{ display:block; font-size:14px; }
+    .trust span{ display:block; font-size:12px; color:var(--muted); margin-top:4px; line-height:1.35; }
+
+    .hero-right{
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.60);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      min-height: 420px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .hero-media{
+      flex: 1;
+      min-height: 260px;
+      background:
+        linear-gradient(180deg, rgba(6,32,22,.20), rgba(6,32,22,.65)),
+        url("assets/images/featured/hero.jpg");
+      background-size: cover;
+      background-position: center;
+      position:relative;
+    }
+    .hero-media::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(600px 320px at 20% 10%, rgba(201,162,74,.36), transparent 58%),
+        radial-gradient(520px 340px at 85% 75%, rgba(15,77,56,.28), transparent 60%);
+      opacity:.9;
+      pointer-events:none;
+    }
+
+    .hero-card{
+      padding: 16px 18px 18px;
+      background: rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(11,27,18,.10);
+    }
+    .hero-card h3{
+      margin: 0 0 6px;
+      font-size: 15px;
+      letter-spacing: -0.2px;
+    }
+    .hero-card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height:1.55;
+    }
+    .mini-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .mini{
+      border-radius: 16px;
+      border: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.80);
+      padding: 12px 12px;
+    }
+    .mini strong{ display:block; font-size:13px; }
+    .mini span{ display:block; font-size:12px; color:var(--muted); margin-top:4px; line-height:1.35; }
+
+    /* Sections */
+    section{ padding: 46px 0; }
+    .section-head{
+      display:flex; align-items:flex-end; justify-content:space-between;
+      gap:16px; flex-wrap:wrap;
+      margin-bottom: 18px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 26px;
+      letter-spacing:-0.4px;
+    }
+    .section-head p{
+      margin:0;
+      max-width: 64ch;
+      color: var(--muted);
+      line-height:1.55;
+      font-size:14px;
+    }
+
+    .grid3{ display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+    .grid4{ display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+
+    .card{
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.70);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+    }
+    .card-pad{ padding: 18px 18px; }
+    .card h3{ margin:0 0 8px; font-size:16px; letter-spacing:-0.2px; }
+    .card p{ margin:0; color: var(--muted); line-height:1.6; font-size: 13.5px; }
+
+    .icon{
+      width: 42px; height:42px; border-radius:16px;
+      display:grid; place-items:center;
+      background:
+        radial-gradient(16px 16px at 30% 30%, rgba(255,255,255,.7), transparent 60%),
+        linear-gradient(135deg, rgba(201,162,74,.55), rgba(11,61,46,.85));
+      border: 1px solid rgba(201,162,74,.35);
+      box-shadow: 0 16px 40px rgba(11,61,46,.18);
+      margin-bottom: 12px;
+    }
+    .icon svg{ width:20px; height:20px; color:white; opacity:.95; }
+
+    /* Categories */
+    .category{
+      display:flex; flex-direction:column; min-height: 170px;
+      background:
+        radial-gradient(420px 220px at 20% 0%, rgba(201,162,74,.22), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.60));
+    }
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:650;
+      color: rgba(11,27,18,.78);
+      margin-top: 10px;
+    }
+    .tag i{
+      width:8px; height:8px; border-radius:999px;
+      background: rgba(11,61,46,.70);
+      box-shadow: 0 0 0 4px rgba(11,61,46,.12);
+      display:inline-block;
+    }
+
+    /* Process */
+    .timeline{
+      display:grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 14px;
+    }
+    .step{
+      padding: 18px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.70);
+      box-shadow: var(--shadow2);
+      position:relative;
+      overflow:hidden;
+      min-height: 160px;
+    }
+    .step::before{
+      content:"";
+      position:absolute; inset:-50%;
+      background: radial-gradient(circle at 30% 30%, rgba(201,162,74,.18), transparent 55%);
+      transform: rotate(12deg);
+      opacity:.9;
+      pointer-events:none;
+    }
+    .num{
+      width:40px; height:40px; border-radius:14px;
+      display:grid; place-items:center;
+      font-weight:800;
+      color:white;
+      background: linear-gradient(135deg, var(--green-700), var(--green-900));
+      border: 1px solid rgba(201,162,74,.35);
+      box-shadow: 0 16px 40px rgba(11,61,46,.18);
+      position:relative; z-index:1;
+    }
+    .step h3{ margin: 12px 0 8px; font-size:15px; position:relative; z-index:1; }
+    .step p{ margin:0; color: var(--muted); font-size:13px; line-height:1.6; position:relative; z-index:1; }
+
+    /* Featured products */
+    .prod{
+      border-radius: var(--radius-xl);
+      overflow:hidden;
+      border: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.75);
+      box-shadow: var(--shadow2);
+      display:flex;
+      flex-direction:column;
+    }
+    .prod-img{
+      height: 170px;
+      background:
+        radial-gradient(500px 220px at 30% 0%, rgba(201,162,74,.22), transparent 55%),
+        linear-gradient(135deg, rgba(11,61,46,.16), rgba(255,255,255,.0));
+      position:relative;
       overflow:hidden;
     }
-    .heroRightTop{padding:14px 14px 10px 14px}
-    .heroRightTopRow{display:flex;justify-content:space-between;align-items:center;gap:10px}
-    .heroRightTag{
-      font-weight:900;letter-spacing:.10em;text-transform:uppercase;
-      color:rgba(228,199,122,.95);font-size:12px;
+    .prod-img img{
+      width:100%; height:100%;
+      object-fit: cover;
+      display:block;
+      filter: saturate(1.05) contrast(1.02);
     }
-    .heroRightMeta{font-size:12px;color:rgba(182,199,232,.92)}
-    ..heroImg{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;display:block}
-    .heroRightBottom{padding:12px 14px 16px 14px}
-    .heroRightBottom b{display:block;margin-bottom:6px;font-size:14px}
-    .heroRightBottom span{display:block;color:rgba(182,199,232,.92);font-size:13px;line-height:1.6}
+    .prod-body{ padding: 16px 16px 18px; }
+    .prod-title{ margin:0 0 6px; font-size:15px; letter-spacing:-0.2px; }
+    .prod-meta{ margin:0; color:var(--muted); font-size:12.8px; line-height:1.55; }
 
-    .section{margin-top:20px}
-    .sectionHead{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:18px 0 10px}
-    .sectionHead h2{margin:0;font-size:18px;letter-spacing:.02em}
-    .sectionHead p{margin:0;color:rgba(182,199,232,.85);font-size:13px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    @media(max-width:980px){ .grid3{grid-template-columns:1fr} }
-    .card{
-      border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      border-radius:20px;
-      padding:16px 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.22);
+    /* CTA banner */
+    .cta{
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(201,162,74,.25);
+      background:
+        radial-gradient(800px 360px at 10% 10%, rgba(201,162,74,.26), transparent 60%),
+        linear-gradient(135deg, rgba(11,61,46,.96), rgba(6,32,22,.96));
+      color: rgba(255,255,255,.92);
+      box-shadow: 0 26px 90px rgba(11,61,46,.22);
+      overflow:hidden;
+      position:relative;
     }
-    .card h3{margin:0 0 8px;font-size:15px}
-    .card p{margin:0;color:rgba(182,199,232,.92);font-size:13px;line-height:1.65}
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    @media(max-width:980px){ .kpis{grid-template-columns:1fr} }
-    .kpi{
-      border:1px solid rgba(228,199,122,.28);
-      background:linear-gradient(180deg, rgba(228,199,122,.10), rgba(255,255,255,.03));
-      border-radius:20px;padding:14px 14px;
+    .cta::after{
+      content:"";
+      position:absolute; inset:-60%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.16), transparent 55%);
+      transform: rotate(10deg);
+      opacity:.9;
+      pointer-events:none;
     }
-    .kpi b{display:block;font-size:14px}
-    .kpi span{display:block;color:rgba(182,199,232,.92);margin-top:6px;font-size:13px;line-height:1.6}
+    .cta-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      gap: 16px; flex-wrap:wrap;
+      padding: 22px 22px;
+      position:relative; z-index:1;
+    }
+    .cta h3{ margin:0; font-size:18px; letter-spacing:-0.2px; }
+    .cta p{ margin:6px 0 0; opacity:.85; max-width: 70ch; line-height:1.55; font-size:13.5px; }
+    .cta-actions{ display:flex; gap: 10px; flex-wrap:wrap; }
 
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-    @media(max-width:980px){ .split{grid-template-columns:1fr} }
+    .btn-light{
+      background: rgba(255,255,255,.92);
+      color: rgba(11,27,18,.92);
+      border: 1px solid rgba(255,255,255,.4);
+      box-shadow: 0 18px 60px rgba(0,0,0,.18);
+    }
+    .btn-outline{
+      background: rgba(255,255,255,.10);
+      color: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: none;
+    }
 
-    .footer{
-      margin-top:26px;
-      color:rgba(182,199,232,.75);
-      font-size:12px;
-      display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
-      padding-top:16px;border-top:1px solid var(--border);
+    /* Footer */
+    footer{
+      border-top: 1px solid rgba(11,27,18,.10);
+      background: rgba(255,255,255,.60);
+      backdrop-filter: blur(10px);
+      padding: 26px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-grid{
+      display:flex; justify-content:space-between; align-items:flex-start;
+      gap: 18px; flex-wrap:wrap;
+    }
+    .footer-grid a{ text-decoration:underline; text-underline-offset:3px; }
+
+    /* Mobile */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .nav-links{ display:none; }
+      .hamburger{ display:inline-grid; place-items:center; }
+      .nav-actions{ min-width: unset; }
+      .grid3{ grid-template-columns: 1fr; }
+      .grid4{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .timeline{ grid-template-columns: 1fr; }
+      .hero-left, .hero-right{ min-height: unset; }
+    }
+
+    @media (max-width: 520px){
+      .grid4{ grid-template-columns: 1fr; }
+      .trust-row{ grid-template-columns: 1fr; }
+    }
+
+    /* Mobile drawer */
+    .drawer{
+      display:none;
+      position:fixed; inset: 0;
+      background: rgba(6,32,22,.42);
+      z-index: 100;
+    }
+    .drawer.open{ display:block; }
+    .drawer-panel{
+      position:absolute; right: 14px; top: 14px; left: 14px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(11,27,18,.10);
+      box-shadow: 0 30px 90px rgba(6,32,22,.22);
+      overflow:hidden;
+      max-width: 520px;
+      margin-left:auto;
+    }
+    .drawer-head{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 14px 14px;
+      border-bottom: 1px solid rgba(11,27,18,.10);
+    }
+    .drawer-links{
+      display:flex; flex-direction:column;
+      padding: 10px 10px;
+      gap: 6px;
+    }
+    .drawer-links a{
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(11,27,18,.08);
+      background: rgba(255,255,255,.78);
+      font-weight: 650;
+      color: rgba(11,27,18,.86);
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header class="top">
-      <div class="brand">
-        <div class="mark" aria-hidden="true"></div>
-        <div>DECOJOLLY</div>
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <span class="pill"><span class="dot"></span> Wholesale-focused • Fast sampling • Clear communication</span>
+          <span class="pill">Based in AZ • Global sourcing</span>
+        </div>
+        <div class="topbar-right">
+          <!-- 你想先随便写邮箱也可以，之后再改 -->
+          <span class="pill">Email: <a href="mailto:sales@decojolly.com">sales@decojolly.com</a></span>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <nav class="nav">
-        <a href="#capabilities">Capabilities</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="./products.html">Product Catalog</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="./index.html" aria-label="Go to home">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-text">
+            <strong>DecoJolly</strong>
+            <span>Holiday & Seasonal Import Partner</span>
+          </div>
+        </a>
 
-    <main class="hero">
-      <div class="heroGrid">
-        <div class="heroLeft">
-          <div class="badge">Holiday & Seasonal Decor</div>
-          <h1>U.S. Import Partner for Holiday & Seasonal Decor</h1>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#why">Why DecoJolly</a>
+          <a href="#categories">Categories</a>
+          <a href="#process">Process</a>
+          <a href="./products.html">Product Catalog</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="./products.html" aria-label="Open Product Catalog">
+            <span>View Catalog</span>
+          </a>
+          <a class="btn btn-primary" href="#contact" aria-label="Get a quote">
+            <span>Request a Quote</span>
+          </a>
+          <button class="hamburger" id="openMenu" aria-label="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-left">
+          <div class="kicker"><span class="spark"></span> Premium holiday décor sourcing • Built for wholesale buyers</div>
+
+          <!-- 你要的 H1（按你写的来） -->
+          <h1>Import Partner for Holiday Seasonal Decker</h1>
+
           <p class="sub">
-            We source, quality-check, and coordinate delivery of seasonal products from factory to U.S. warehouses—built
-            for retail timelines and consistent standards.
+            We help buyers move from “nice samples” to reliable deliveries—through curated collections, clear specs,
+            and a clean import workflow. Glass ornaments, giftable crafts, seasonal décor and more.
           </p>
 
-          <div class="pillRow">
-            <div class="pill">Sourcing & Negotiation</div>
-            <div class="pill">QC Workflow</div>
-            <div class="pill">Packaging & Compliance</div>
-            <div class="pill">U.S. Distribution Support</div>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="./products.html"><span>Open Product Catalog</span></a>
+            <a class="btn btn-ghost" href="#process">See How We Work</a>
           </div>
 
-          <div class="ctaRow">
-            <a class="btn btnGold" href="./products.html">View Product Catalog</a>
-            <a class="btn" href="mailto:info@decojolly.com">Request a Quote</a>
-          </div>
-
-          <div class="kpis">
-            <div class="kpi">
-              <b>Quality Control</b>
-              <span>Incoming checks, in-process inspections, and pre-shipment review.</span>
+          <div class="trust-row" aria-label="Highlights">
+            <div class="trust">
+              <strong>Wholesale-ready</strong>
+              <span>MOQ planning, packaging specs, carton marks, and buyer-friendly documentation.</span>
             </div>
-            <div class="kpi">
-              <b>Customization</b>
-              <span>Design adaptation, private label, custom packaging, and SKU planning.</span>
+            <div class="trust">
+              <strong>Quality visibility</strong>
+              <span>Sampling, QC checkpoints, and photo updates—so decisions stay fast and clear.</span>
             </div>
-            <div class="kpi">
-              <b>Coordination</b>
-              <span>Production timeline alignment and shipment planning support.</span>
+            <div class="trust">
+              <strong>Holiday expertise</strong>
+              <span>Christmas, Halloween, Easter, and seasonal gifting cycles.</span>
             </div>
           </div>
         </div>
 
-        <div class="heroRight">
-          <div class="heroRightTop">
-            <div class="heroRightTopRow">
-              <div class="heroRightTag">Featured Collection</div>
-              <div class="heroRightMeta">Holiday • Seasonal • Gift-ready</div>
+        <aside class="hero-right" aria-label="Hero visual">
+          <!-- 把你的首图放到 assets/hero.jpg（或改路径） -->
+          <div class="hero-media" role="img" aria-label="Holiday décor hero image"></div>
+
+          <div class="hero-card">
+            <h3>Designed to feel like a real company site</h3>
+            <p>Clean layout, premium green & gold palette, and a warm holiday mood—without looking “too busy”.</p>
+
+            <div class="mini-grid" aria-label="Quick facts">
+              <div class="mini">
+                <strong>What you get</strong>
+                <span>Catalog + quote workflow</span>
+              </div>
+              <div class="mini">
+                <strong>Best for</strong>
+                <span>Retailers • importers • distributors</span>
+              </div>
+              <div class="mini">
+                <strong>Lead time</strong>
+                <span>Confirmed per PO</span>
+              </div>
+              <div class="mini">
+                <strong>Support</strong>
+                <span>Specs • packaging • logistics</span>
+              </div>
             </div>
           </div>
+        </aside>
 
-          <img class="heroImg" src="assets/images/featured/hero.jpg" alt="DECOJOLLY Featured Products">
+      </div>
+    </div>
+  </main>
 
-          <div class="heroRightBottom">
-            <b>Retail-ready assortments</b>
-            <span>Curated seasonal collections with packaging options and stable delivery coordination.</span>
-          </div>
+  <!-- Why -->
+  <section id="why">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Why DecoJolly</h2>
+          <p>Premium look is only step one. The real advantage is a smoother sourcing + delivery workflow.</p>
         </div>
       </div>
-    </main>
 
-    <section class="section" id="capabilities">
-      <div class="sectionHead">
-        <h2>Capabilities</h2>
-        <p>End-to-end support — from sourcing to delivery</p>
-      </div>
       <div class="grid3">
         <div class="card">
-          <h3>Sourcing & Supply Planning</h3>
-          <p>Factory coordination, product selection, pricing alignment, and production planning to meet seasonal demand.</p>
+          <div class="card-pad">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z"/>
+              </svg>
+            </div>
+            <h3>Collection curation</h3>
+            <p>Holiday assortment planning that feels premium: coherent themes, color stories, and giftable SKUs.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Quality Control & Traceability</h3>
-          <p>Defined QC workflow, photo/video confirmation when needed, and issue tracking for consistent standards.</p>
-        </div>
-        <div class="card">
-          <h3>Packaging & Compliance</h3>
-          <p>Gift-ready packaging, labeling support, carton marks, and basic compliance coordination for export.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="portfolio">
-      <div class="sectionHead">
-        <h2>Portfolio</h2>
-        <p>Seasonal collections and custom programs</p>
-      </div>
-      <div class="split">
         <div class="card">
-          <h3>Holiday Ornaments</h3>
-          <p>Curated collections for Christmas and key seasonal moments—built for retail presentation and sell-through.</p>
+          <div class="card-pad">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 7l-8 10-4-4"/>
+              </svg>
+            </div>
+            <h3>Operational clarity</h3>
+            <p>Clear specs, packaging requirements, and fast back-and-forth so the project doesn’t stall.</p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Seasonal Decor</h3>
-          <p>Home décor items for major seasons, with options for private label, custom packaging, and assortment building.</p>
-        </div>
-      </div>
-      <div style="margin-top:12px">
-        <a class="btn btnGold" href="./products.html">Open Product Catalog</a>
-      </div>
-    </section>
 
-    <section class="section" id="contact">
-      <div class="sectionHead">
-        <h2>Contact</h2>
-        <p>Tell us what you need — we’ll respond fast</p>
+        <div class="card">
+          <div class="card-pad">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M12 3v18"/>
+              </svg>
+            </div>
+            <h3>Buyer-friendly support</h3>
+            <p>Samples, photos, and documentation organized for buyers—easy to review, easy to approve.</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Seasonal Categories</h2>
+          <p>Start with 4–6 hero products on the homepage. Keep the full assortment inside the Product Catalog page.</p>
+        </div>
+        <a class="btn" href="./products.html">Browse Catalog →</a>
+      </div>
+
+      <div class="grid4">
+        <div class="card category">
+          <div class="card-pad">
+            <h3>Christmas Ornaments</h3>
+            <p>Glass ornaments, hanging décor, tree sets, premium giftables.</p>
+            <div class="tag"><i></i> Classic • Modern • Luxury</div>
+          </div>
+        </div>
+
+        <div class="card category">
+          <div class="card-pad">
+            <h3>Holiday Giftables</h3>
+            <p>Tabletop décor, packaged sets, seasonal bundles.</p>
+            <div class="tag"><i></i> Retail-ready</div>
+          </div>
+        </div>
+
+        <div class="card category">
+          <div class="card-pad">
+            <h3>Halloween</h3>
+            <p>Spooky accents, themed ornaments, seasonal craft décor.</p>
+            <div class="tag"><i></i> Strong shelf impact</div>
+          </div>
+        </div>
+
+        <div class="card category">
+          <div class="card-pad">
+            <h3>Easter & Spring</h3>
+            <p>Pastel décor, spring motifs, gifting accessories.</p>
+            <div class="tag"><i></i> Fresh & bright</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>How We Work</h2>
+          <p>A clean, buyer-friendly process—from inquiry to shipment. Simple, fast, and professional.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>Inquiry & Needs</h3>
+          <p>Tell us your target season, budget range, style direction, and required SKUs.</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>Sampling</h3>
+          <p>We recommend items, confirm specs, and prepare samples for approval.</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>PO & Production</h3>
+          <p>Confirm packaging, carton marks, and production timeline based on your PO.</p>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <h3>QC & Delivery</h3>
+          <p>QC checkpoints + shipment coordination. Documentation organized for smooth receiving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured -->
+  <section id="featured">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Featured Picks</h2>
+          <p>这里建议放 4–6 张你最强的产品图（真正能打动客户的），其余全部放 Catalog 里。</p>
+        </div>
+      </div>
+
+      <div class="grid4">
+        <!-- 你把图片放到 assets/featured/ 里，然后把 src 换成你的文件名 -->
+        <div class="prod">
+          <div class="prod-img">
+            <!-- 没图也能显示背景；有图就取消下面注释并换路径 -->
+            <!-- <img src="assets/featured/p1.jpg" alt="Featured product 1"> -->
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">Glass Ornament — Premium Finish</h3>
+            <p class="prod-meta">Refined detailing, gift-ready feel, perfect for curated collections.</p>
+          </div>
+        </div>
+
+        <div class="prod">
+          <div class="prod-img">
+            <!-- <img src="assets/featured/p2.jpg" alt="Featured product 2"> -->
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">Holiday Tabletop Décor</h3>
+            <p class="prod-meta">Shelf-appeal pieces designed for seasonal display programs.</p>
+          </div>
+        </div>
+
+        <div class="prod">
+          <div class="prod-img">
+            <!-- <img src="assets/featured/p3.jpg" alt="Featured product 3"> -->
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">Giftable Set — Assorted Theme</h3>
+            <p class="prod-meta">Theme consistency + packaging structure that reads “premium”.</p>
+          </div>
+        </div>
+
+        <div class="prod">
+          <div class="prod-img">
+            <!-- <img src="assets/featured/p4.jpg" alt="Featured product 4"> -->
+          </div>
+          <div class="prod-body">
+            <h3 class="prod-title">Seasonal Craft Décor</h3>
+            <p class="prod-meta">For holiday programs that need variety without losing quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta">
+        <div class="cta-inner">
+          <div>
+            <h3>Ready to evaluate the collection?</h3>
+            <p>Open the Product Catalog, shortlist items, and send us your requirements—then we’ll quote and sample fast.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="./products.html">Open Catalog</a>
+            <a class="btn btn-outline" href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Contact</h2>
+          <p>你现在先写一个邮箱完全没问题。等你公司邮箱体系完全定了再替换也行。</p>
+        </div>
+      </div>
+
       <div class="grid3">
         <div class="card">
-          <h3>Email</h3>
-          <p><a href="mailto:info@decojolly.com">info@decojolly.com</a></p>
-          <p style="margin-top:8px;color:rgba(182,199,232,.85)">Include item numbers, quantity, and target delivery date.</p>
+          <div class="card-pad">
+            <h3>Email</h3>
+            <p><a href="mailto:sales@decojolly.com">sales@decojolly.com</a></p>
+          </div>
         </div>
         <div class="card">
-          <h3>Catalog</h3>
-          <p>Browse products and download the PDF catalog.</p>
-          <p style="margin-top:10px">
-            <a class="btn btnGold" href="./products.html">Go to Product Catalog</a>
-          </p>
+          <div class="card-pad">
+            <h3>Catalog</h3>
+            <p><a href="./products.html">Open Product Catalog</a></p>
+          </div>
         </div>
         <div class="card">
-          <h3>Availability</h3>
-          <p>Typical response within 24 hours on business days.</p>
-          <p style="margin-top:8px;color:rgba(182,199,232,.85)">Arizona time (MST).</p>
+          <div class="card-pad">
+            <h3>Location</h3>
+            <p>Arizona, USA • Global sourcing network</p>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div>© <span id="y"></span> DECOJOLLY. All rights reserved.</div>
-      <div>Built on GitHub Pages • Secure via HTTPS</div>
-    </footer>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong style="color:rgba(11,27,18,.86)">DecoJolly</strong><br/>
+          <span>Holiday & Seasonal Import Partner</span>
+        </div>
+        <div>
+          <div>© <span id="year"></span> DecoJolly. All rights reserved.</div>
+          <div style="margin-top:6px;">Quick: <a href="./products.html">Product Catalog</a> • <a href="#contact">Contact</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile drawer -->
+  <div class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-panel" role="dialog" aria-label="Menu">
+      <div class="drawer-head">
+        <div class="brand" style="min-width:unset">
+          <div class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:12px;"></div>
+          <div class="brand-text">
+            <strong>DecoJolly</strong>
+            <span>Holiday & Seasonal</span>
+          </div>
+        </div>
+        <button class="btn btn-ghost" id="closeMenu" aria-label="Close menu">Close</button>
+      </div>
+      <div class="drawer-links">
+        <a href="#why" class="drawerLink">Why DecoJolly</a>
+        <a href="#categories" class="drawerLink">Categories</a>
+        <a href="#process" class="drawerLink">Process</a>
+        <a href="./products.html">Product Catalog</a>
+        <a href="#contact" class="drawerLink">Contact</a>
+      </div>
+    </div>
   </div>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const drawer = document.getElementById("drawer");
+    const openMenu = document.getElementById("openMenu");
+    const closeMenu = document.getElementById("closeMenu");
+
+    const openDrawer = () => {
+      drawer.classList.add("open");
+      drawer.setAttribute("aria-hidden", "false");
+    };
+    const closeDrawer = () => {
+      drawer.classList.remove("open");
+      drawer.setAttribute("aria-hidden", "true");
+    };
+
+    openMenu?.addEventListener("click", openDrawer);
+    closeMenu?.addEventListener("click", closeDrawer);
+    drawer?.addEventListener("click", (e) => {
+      if (e.target === drawer) closeDrawer();
+    });
+
+    document.querySelectorAll(".drawerLink").forEach(a => {
+      a.addEventListener("click", closeDrawer);
+    });
   </script>
 </body>
 </html>
