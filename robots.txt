@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/docs/
+
+Sitemap: https://www.decojolly.com/sitemap.xml

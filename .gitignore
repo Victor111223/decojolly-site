@@ -1,0 +1,14 @@
+# --- Internal / private working files (do NOT publish to the public site or public repo) ---
+# Shared AI working memory and internal project notes. These stay local only.
+AI_WORKSPACE/
+PROJECT-NOTES.md
+
+# Internal source PDFs / sensitive originals must never be published.
+# Keep originals outside the repo (a backup copy is on the Desktop).
+assets/docs/*-original.pdf
+assets/docs/company-profile.pdf
+assets/docs/decojolly-product-catalog.pdf
+
+# OS junk
+.DS_Store
+**/.DS_Store

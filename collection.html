@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Browse DecoJolly product collections by category, buyer use case, material, size, packaging, and customization options. Pricing by quote." />
+  <title>Product Collection | DecoJolly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="canonical" href="https://www.decojolly.com/collection.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DecoJolly" />
+  <meta property="og:title" content="Product Collection | DecoJolly" />
+  <meta property="og:description" content="Browse DecoJolly product collections by category, buyer use case, material, size, packaging, and customization options. Pricing by quote." />
+  <meta property="og:url" content="https://www.decojolly.com/collection.html" />
+  <meta property="og:image" content="https://www.decojolly.com/assets/images/brand/decojolly-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Product Collection | DecoJolly" />
+  <meta name="twitter:description" content="Browse DecoJolly product collections by category, buyer use case, material, size, packaging, and customization options. Pricing by quote." />
+  <meta name="twitter:image" content="https://www.decojolly.com/assets/images/brand/decojolly-logo.png" />
+</head>
+
+<body data-page="products">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><div class="container"><div class="nav">
+        <a class="brand" href="./index.html" aria-label="DecoJolly home"><img src="./assets/images/brand/logo-header.png" alt="DecoJolly - since 2011" /></a>
+        <nav class="nav-links" aria-label="Primary"><a class="" href="./index.html">Home</a><a class="" href="./buyers.html">Buyers</a><a class="active" href="./products.html">Products</a><a class="" href="./capabilities.html">Capabilities</a><a class="" href="./suppliers.html">Suppliers</a><a class="" href="./about.html">About</a></nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm" href="./contact.html">Request a Quote</a>
+          <button type="button" class="hamburger" id="openMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div></div></header>
+  <div class="drawer" id="drawer" aria-hidden="true"><div class="drawer-panel" role="dialog" aria-label="Menu">
+      <div class="drawer-head"><img src="./assets/images/brand/logo-header.png" alt="DecoJolly" /><button type="button" class="btn btn-ghost btn-sm" id="closeMenu">Close</button></div>
+      <div class="drawer-links"><a class="drawerLink" href="./index.html">Home</a><a class="drawerLink" href="./buyers.html">Buyers</a><a class="drawerLink" href="./products.html">Products</a><a class="drawerLink" href="./capabilities.html">Capabilities</a><a class="drawerLink" href="./suppliers.html">Suppliers</a><a class="drawerLink" href="./about.html">About</a><a class="drawerLink" href="./contact.html">Request a Quote</a></div>
+    </div></div>
+
+  <main id="collectionDetail"></main>
+
+  <footer><div class="container"><div class="foot-grid">
+      <div><div class="foot-brand">DecoJolly<span class="since">SINCE 2011</span></div>
+        <p style="margin-top:14px;max-width:34ch;color:rgba(255,255,255,.6);font-size:14.5px;">U.S.-based holiday &amp; seasonal decor supply chain partner. Arizona, USA.</p></div>
+      <div class="foot-col"><h4>Explore</h4><a href="./buyers.html">Buyers</a><a href="./products.html">Products</a><a href="./gallery.html">Gallery</a><a href="./capabilities.html">Capabilities</a><a href="./suppliers.html">Suppliers</a><a href="./about.html">About</a></div>
+      <div class="foot-col"><h4>Get started</h4><a href="./contact.html">Request a Quote</a><a href="./contact.html#buyer-access">Apply for Buyer Access</a><a href="./suppliers.html">Become a Supplier Partner</a><a href="./products.html">Product Catalog</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="mailto:sales@decojolly.com">sales@decojolly.com</a><p>Arizona, USA</p></div>
+    </div>
+    <div class="foot-bottom"><div>© 2026 DecoJolly. All rights reserved.</div><div>Holiday &amp; seasonal decor · Sourced and delivered for retail buyers</div></div>
+  </div></footer>
+  <script>
+    (function(){var d=document.getElementById("drawer");var o=function(){d.classList.add("open");d.setAttribute("aria-hidden","false");};var c=function(){d.classList.remove("open");d.setAttribute("aria-hidden","true");};
+    var ob=document.getElementById("openMenu"),cb=document.getElementById("closeMenu");
+    if(ob)ob.addEventListener("click",o);if(cb)cb.addEventListener("click",c);
+    if(d)d.addEventListener("click",function(e){if(e.target===d)c();});
+    document.querySelectorAll(".drawerLink").forEach(function(a){a.addEventListener("click",c);});})();
+  </script>
+  <script src="./assets/data/products.js"></script>
+  <script src="./assets/data/collections.js"></script>
+  <script src="./assets/js/quote-cart.js"></script>
+  <script src="./assets/js/collections.js"></script>
+</body>
+</html>

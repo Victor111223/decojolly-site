@@ -1,497 +1,173 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Catalog | DecoJolly</title>
-  <meta name="description" content="DecoJolly product catalog: premium holiday & seasonal decor, ready for wholesale and retail programs." />
-
-  <style>
-    :root{
-      --bg0:#061f16;
-      --bg1:#0b2a1f;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.08);
-      --line:rgba(255,255,255,.12);
-      --text:#eaf3ee;
-      --muted:rgba(234,243,238,.78);
-      --gold:#d6b25e;
-      --gold2:#f3d78f;
-      --shadow: 0 18px 45px rgba(0,0,0,.45);
-      --r16:16px;
-      --r20:20px;
-      --max:1180px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 10% 0%, rgba(214,178,94,.12), transparent 55%),
-        radial-gradient(900px 500px at 90% 10%, rgba(0,200,130,.10), transparent 55%),
-        linear-gradient(180deg, var(--bg0), #04160f 70%);
-    }
-
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px;}
-
-    /* NAV */
-    .nav{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background: rgba(6,31,22,.62);
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .nav-inner{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:18px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:800; letter-spacing:.4px;
-    }
-    .mark{
-      width:34px; height:34px; border-radius:12px;
-      background: linear-gradient(135deg, rgba(214,178,94,.95), rgba(0,200,130,.55));
-      box-shadow: 0 10px 25px rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.12);
-    }
-    .nav-links{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
-    .nav-links a{
-      padding:9px 12px; border-radius:12px;
-      color:var(--muted);
-      border:1px solid transparent;
-    }
-    .nav-links a:hover{border-color:rgba(214,178,94,.25); color:var(--text); background:rgba(255,255,255,.04)}
-    .nav-cta{display:flex; gap:10px; align-items:center}
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px;
-      border-radius:14px;
-      border:1px solid rgba(214,178,94,.22);
-      background: rgba(255,255,255,.04);
-      color:var(--text);
-      box-shadow: 0 10px 25px rgba(0,0,0,.25);
-      cursor:pointer;
-      white-space:nowrap;
-    }
-    .btn:hover{border-color:rgba(214,178,94,.45); background:rgba(255,255,255,.06)}
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(214,178,94,.95), rgba(214,178,94,.62));
-      border-color: rgba(255,255,255,.14);
-      color:#132015;
-      font-weight:800;
-    }
-    .btn.primary:hover{filter: brightness(1.03)}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:7px 12px; border-radius:999px;
-      border:1px solid rgba(214,178,94,.22);
-      background: rgba(255,255,255,.04);
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    /* HERO */
-    .hero{
-      padding:44px 0 26px;
-    }
-    .hero-grid{
-      display:grid; gap:18px;
-      grid-template-columns: 1.25fr .75fr;
-      align-items:stretch;
-    }
-    .hero-card{
-      border-radius: var(--r20);
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .hero-main{padding:26px}
-    .kicker{color:var(--gold2); font-weight:800; letter-spacing:.12em; font-size:12px; text-transform:uppercase}
-    h1{
-      margin:10px 0 8px;
-      font-size: clamp(30px, 4vw, 44px);
-      line-height:1.06;
-      letter-spacing:-.02em;
-    }
-    .sub{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.55;
-      margin:0 0 16px;
-      max-width:60ch;
-    }
-    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}
-
-    .hero-side{padding:18px}
-    .side-box{
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      padding:14px;
-      margin-bottom:12px;
-    }
-    .side-title{font-weight:800; margin:0 0 6px}
-    .side-txt{margin:0; color:var(--muted); font-size:14px; line-height:1.5}
-
-    /* TOOLBAR */
-    .toolbar{
-      display:flex; gap:10px; flex-wrap:wrap;
-      align-items:center; justify-content:space-between;
-      margin:14px 0 10px;
-    }
-    .filters{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .chip{
-      padding:9px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-      color:var(--muted);
-      cursor:pointer;
-      font-size:14px;
-    }
-    .chip:hover{border-color:rgba(214,178,94,.35); color:var(--text)}
-    .chip.active{
-      border-color: rgba(214,178,94,.55);
-      background: rgba(214,178,94,.12);
-      color: var(--text);
-    }
-    .search{
-      min-width:240px;
-      display:flex; align-items:center; gap:10px;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.04);
-    }
-    .search input{
-      width:100%;
-      border:none; outline:none;
-      background:transparent;
-      color:var(--text);
-      font-size:14px;
-    }
-    .search input::placeholder{color:rgba(234,243,238,.55)}
-
-    /* GRID */
-    .section{padding:18px 0 40px}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
-    .card{
-      grid-column: span 3;
-      border-radius: var(--r16);
-      border:1px solid rgba(255,255,255,.10);
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: 0 14px 32px rgba(0,0,0,.35);
-      overflow:hidden;
-      transition: transform .18s ease, border-color .18s ease, background .18s ease;
-    }
-    .card:hover{transform: translateY(-2px); border-color: rgba(214,178,94,.30)}
-    .thumb{
-      height:150px;
-      background:
-        radial-gradient(240px 140px at 30% 30%, rgba(214,178,94,.25), transparent 60%),
-        radial-gradient(260px 160px at 80% 10%, rgba(0,200,130,.22), transparent 55%),
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      border-bottom:1px solid rgba(255,255,255,.08);
-      display:flex; align-items:end; justify-content:space-between;
-      padding:10px 12px;
-      gap:10px;
-    }
-    .tag{
-      font-size:12px; color:rgba(234,243,238,.92);
-      border:1px solid rgba(214,178,94,.25);
-      background: rgba(0,0,0,.15);
-      padding:6px 10px;
-      border-radius:999px;
-    }
-    .body{padding:12px}
-    .name{margin:0 0 6px; font-weight:850}
-    .desc{margin:0 0 10px; color:var(--muted); font-size:13.5px; line-height:1.45}
-    .meta{
-      display:flex; gap:8px; flex-wrap:wrap;
-      margin-top:10px;
-    }
-    .meta span{
-      font-size:12px;
-      color:rgba(234,243,238,.75);
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      padding:6px 10px;
-      border-radius:999px;
-    }
-
-    /* FOOTER */
-    footer{
-      border-top:1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.02);
-      padding:24px 0;
-      color:var(--muted);
-    }
-    .foot{
-      display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
-      align-items:center;
-    }
-
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .card{grid-column: span 6}
-    }
-    @media (max-width: 640px){
-      .card{grid-column: span 12}
-      .search{min-width: 0; width:100%}
-      .toolbar{gap:12px}
-    }
-  </style>
+  <meta name="description" content="Browse DecoJolly's B2B seasonal product catalog: Christmas glass ornaments, glass balls, tabletop decor, Halloween, Easter, regional souvenirs, custom logo ornaments, and private-label packaging. Pricing by quote." />
+  <title>Product Catalog | DecoJolly - Holiday & Seasonal Decor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="canonical" href="https://www.decojolly.com/products.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DecoJolly" />
+  <meta property="og:title" content="Product Catalog | DecoJolly - Holiday &amp; Seasonal Decor" />
+  <meta property="og:description" content="Browse DecoJolly&#x27;s B2B seasonal product catalog: Christmas glass ornaments, glass balls, tabletop decor, Halloween, Easter, regional souvenirs, custom logo ornaments, and private-label packaging. Pricing by quote." />
+  <meta property="og:url" content="https://www.decojolly.com/products.html" />
+  <meta property="og:image" content="https://www.decojolly.com/assets/images/brand/decojolly-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Product Catalog | DecoJolly - Holiday &amp; Seasonal Decor" />
+  <meta name="twitter:description" content="Browse DecoJolly&#x27;s B2B seasonal product catalog: Christmas glass ornaments, glass balls, tabletop decor, Halloween, Easter, regional souvenirs, custom logo ornaments, and private-label packaging. Pricing by quote." />
+  <meta name="twitter:image" content="https://www.decojolly.com/assets/images/brand/decojolly-logo.png" />
 </head>
 
-<body>
-  <!-- NAV -->
-  <div class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="index.html" aria-label="DecoJolly Home">
-        <span class="mark"></span>
-        <span>DecoJolly</span>
-      </a>
+<body data-page="products">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><div class="container"><div class="nav">
+        <a class="brand" href="./index.html" aria-label="DecoJolly home"><img src="./assets/images/brand/logo-header.png" alt="DecoJolly - since 2011" /></a>
+        <nav class="nav-links" aria-label="Primary"><a class="" href="./index.html">Home</a><a class="" href="./buyers.html">Buyers</a><a class="active" href="./products.html" aria-current="page">Products</a><a class="" href="./capabilities.html">Capabilities</a><a class="" href="./suppliers.html">Suppliers</a><a class="" href="./about.html">About</a></nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm" href="./contact.html">Request a Quote</a>
+          <button type="button" class="hamburger" id="openMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div></div></header>
+  <div class="drawer" id="drawer" aria-hidden="true"><div class="drawer-panel" role="dialog" aria-label="Menu">
+      <div class="drawer-head"><img src="./assets/images/brand/logo-header.png" alt="DecoJolly" /><button type="button" class="btn btn-ghost btn-sm" id="closeMenu">Close</button></div>
+      <div class="drawer-links"><a class="drawerLink" href="./index.html">Home</a><a class="drawerLink" href="./buyers.html">Buyers</a><a class="drawerLink" href="./products.html">Products</a><a class="drawerLink" href="./capabilities.html">Capabilities</a><a class="drawerLink" href="./suppliers.html">Suppliers</a><a class="drawerLink" href="./about.html">About</a><a class="drawerLink" href="./contact.html">Request a Quote</a></div>
+    </div></div>
+  <a id="main" tabindex="-1"></a>
 
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html" style="color:var(--text); background:rgba(214,178,94,.10); border-color:rgba(214,178,94,.25);">Catalog</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#capabilities">Capabilities</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
-
-      <div class="nav-cta">
-        <a class="btn"  href="/assets/docs/decojolly-product-catalog.pdf" target="_blank" rel="noopener">
-  Download Product Catalog (PDF)</a>
-        <a class="btn primary" href="mailto:info@decojolly.com">Get Quote</a>
+  <section class="page-hero catalog-hero">
+    <div class="container">
+      <span class="eyebrow">Product Catalog</span>
+      <h1>Browse seasonal products by item, category, and use case.</h1>
+      <p>Start with a curated preview of Christmas ornaments, glass balls, tabletop decor, Halloween, Easter, regional souvenirs, custom logo programs, and packaging support. Every item is quote-based and can be adjusted by program.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="./contact.html">Request Line Sheets</a>
+        <a class="btn btn-ghost" href="./assets/docs/decojolly-catalog.pdf" download>Download Catalog (PDF)</a>
+        <a class="btn btn-ghost" href="./gallery.html">View Gallery</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-card">
-        <div class="hero-main">
-          <div class="kicker">Product Catalog</div>
-          <h1>Holiday & Seasonal Decor Collections</h1>
-          <p class="sub">
-            Browse our curated assortment for wholesale programs—ornaments, tabletop decor, and seasonal accents.
-            Download the full PDF catalog, or filter below for quick selection.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary"  href="/assets/docs/decojolly-product-catalog.pdf" target="_blank" rel="noopener">
-  Download Product Catalog (PDF)</a>
-            <a class="btn" href="mailto:info@decojolly.com?subject=Catalog%20Inquiry%20-%20DecoJolly">Request Pricing</a>
-            <span class="pill">MOQ-ready • Bulk packaging • Customization</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="hero-side">
-          <div class="side-box">
-            <p class="side-title">What you’ll find here</p>
-            <p class="side-txt">Fast categories + search, then jump to PDF for full specs, packaging, and line sheets.</p>
-          </div>
-          <div class="side-box">
-            <p class="side-title">Need a tailored assortment?</p>
-            <p class="side-txt">Tell us your retailer channel, target price, and season. We’ll build a curated bundle.</p>
-          </div>
-          <div class="side-box">
-            <p class="side-title">Lead times & compliance</p>
-            <p class="side-txt">Factory-direct production with stable QC flow. Regional compliance support available.</p>
-          </div>
-        </div>
+  <section class="sec-tight">
+    <div class="container">
+      <div class="stat-row">
+        <div class="stat-cell"><b>380+</b><span>catalog items to browse</span></div>
+        <div class="stat-cell"><b>9</b><span>buyer-focused categories</span></div>
+        <div class="stat-cell"><b>Quote</b><span>no public wholesale pricing</span></div>
+        <div class="stat-cell"><b>Custom</b><span>product and packaging support</span></div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- TOOLBAR -->
-  <main class="section">
-    <div class="wrap">
-      <div class="toolbar">
-        <div class="filters" id="filters">
-          <button class="chip active" data-filter="all" type="button">All</button>
-          <button class="chip" data-filter="ornaments" type="button">Ornaments</button>
-          <button class="chip" data-filter="tabletop" type="button">Tabletop</button>
-          <button class="chip" data-filter="seasonal" type="button">Seasonal</button>
-          <button class="chip" data-filter="custom" type="button">Custom</button>
-        </div>
-
-        <div class="search" role="search" aria-label="Search catalog">
-          <span style="opacity:.75">⌕</span>
-          <input id="search" type="search" placeholder="Search: glass, Christmas, pumpkin, set..." />
-        </div>
+  <section>
+    <div class="container">
+      <div class="head">
+        <span class="eyebrow">Shop by collection</span>
+        <h2>Start with the category your buyer is sourcing.</h2>
+        <p>Each collection gives buyers a focused view of product direction, safe specs, packaging options, and the products currently shown in that category.</p>
       </div>
+      <div class="collection-grid" id="collectionGrid"></div>
+    </div>
+  </section>
 
-      <!-- GRID -->
-      <div class="grid" id="grid">
-        <!-- NOTE:
-          这些卡片是“网页快速浏览”，真正规格以 PDF 为准。
-          你后面有真实产品图时，我可以把 thumb 改成 <img> 并绑定 assets/images/... -->
-        <article class="card" data-cat="ornaments" data-key="christmas glass ornaments baubles">
-          <div class="thumb">
-            <span class="tag">Ornaments</span>
-            <span class="tag" style="border-color:rgba(255,255,255,.16)">Glass</span>
-          </div>
-          <div class="body">
-            <p class="name">Glass Ornament Series</p>
-            <p class="desc">Premium seasonal glass ornaments in multiple finishes—ideal for retail displays and gift sets.</p>
-            <div class="meta">
-              <span>Retail-ready</span><span>Giftable</span><span>OEM/ODM</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-cat="ornaments" data-key="holiday tree hanging decor gold green">
-          <div class="thumb">
-            <span class="tag">Ornaments</span>
-            <span class="tag" style="border-color:rgba(255,255,255,.16)">Assortments</span>
-          </div>
-          <div class="body">
-            <p class="name">Assorted Tree Decor</p>
-            <p class="desc">Curated mixes designed for rapid merchandising—balanced colors, shapes, and packaging options.</p>
-            <div class="meta">
-              <span>Assort packs</span><span>Bulk cartons</span><span>Fast pick</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-cat="tabletop" data-key="tabletop decor centerpiece candle holder">
-          <div class="thumb">
-            <span class="tag">Tabletop</span>
-            <span class="tag" style="border-color:rgba(255,255,255,.16)">Home</span>
-          </div>
-          <div class="body">
-            <p class="name">Tabletop Accents</p>
-            <p class="desc">Centerpieces, small decor, and display pieces—built for seasonal rotation and premium look.</p>
-            <div class="meta">
-              <span>Merchandising</span><span>Sets</span><span>Mix & match</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-cat="seasonal" data-key="halloween pumpkin autumn seasonal">
-          <div class="thumb">
-            <span class="tag">Seasonal</span>
-            <span class="tag" style="border-color:rgba(255,255,255,.16)">Autumn</span>
-          </div>
-          <div class="body">
-            <p class="name">Autumn & Halloween</p>
-            <p class="desc">Pumpkin-themed and fall collections—great for Q3/Q4 rollouts and themed end-caps.</p>
-            <div class="meta">
-              <span>Holiday-ready</span><span>Bundles</span><span>Colorways</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-cat="seasonal" data-key="easter spring seasonal ornaments">
-          <div class="thumb">
-            <span class="tag">Seasonal</span>
-            <span class="tag" style="border-color:rgba(255,255,255,.16)">Spring</span>
-          </div>
-          <div class="body">
-            <p class="name">Spring Collection</p>
-            <p class="desc">Bright seasonal items for spring promotions—flexible packaging and SKU planning support.</p>
-            <div class="meta">
-              <span>Refresh</span><span>Light palette</span><span>Retail packs</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-cat="custom" data-key="custom oem odm private label packaging">
-          <div class="thumb">
-            <span class="tag">Custom</span>
-            <span class="tag" style="border-color:rgba(255,255,255,.16)">OEM/ODM</span>
-          </div>
-          <div class="body">
-            <p class="name">Customization Program</p>
-            <p class="desc">Private label, packaging, artwork, and finish customization—tell us channel + target MSRP.</p>
-            <div class="meta">
-              <span>Private label</span><span>Packaging</span><span>QC flow</span>
-            </div>
-          </div>
-        </article>
+  <section class="sec-cream">
+    <div class="container">
+      <div class="catalog-toolbar">
+        <div>
+          <span class="eyebrow">Filter catalog</span>
+          <h2>Find products faster</h2>
+        </div>
+        <div class="catalog-count" id="catalogCount">Products loading</div>
       </div>
+      <div class="catalog-controls" aria-label="Product filters">
+        <div class="field catalog-search"><label for="catalogSearch">Search</label><input id="catalogSearch" type="search" placeholder="Search by item, category, material, or theme" /></div>
+        <div class="field"><label for="filterSeason">Season</label><select id="filterSeason"></select></div>
+        <div class="field"><label for="filterCategory">Category</label><select id="filterCategory"></select></div>
+        <div class="field"><label for="filterMaterial">Material</label><select id="filterMaterial"></select></div>
+        <div class="field"><label for="catalogSort">Sort</label><select id="catalogSort">
+          <option value="default">Featured</option>
+          <option value="name-asc">Name A–Z</option>
+          <option value="name-desc">Name Z–A</option>
+          <option value="season">Season</option>
+          <option value="category">Category</option>
+        </select></div>
+        <button class="btn btn-ghost btn-sm" id="catalogReset" type="button">Reset</button>
+      </div>
+      <div class="catalog-chips" id="catalogChips" aria-live="polite"></div>
+    </div>
+  </section>
 
-      <!-- CTA -->
-      <div style="margin-top:18px; padding:16px; border-radius:18px; border:1px solid rgba(255,255,255,.10); background:rgba(255,255,255,.04);">
-        <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center;">
-          <div>
-            <div style="font-weight:900; margin-bottom:4px;">Need the full specs & line sheets?</div>
-            <div style="color:var(--muted); font-size:14px;">Download the PDF catalog for detailed SKUs, packaging, and configurations.</div>
+  <section>
+    <div class="container">
+      <div class="product-grid" id="catalogGrid"></div>
+      <div id="catalogSentinel" aria-hidden="true"></div>
+      <div class="catalog-more"><button class="btn btn-ghost" id="catalogMore" type="button" hidden>Load more products</button></div>
+      <div class="panel catalog-empty" id="catalogEmpty" hidden>
+        <h3>No products match these filters.</h3>
+        <p>Try a broader category or send us your idea. We can source and develop beyond the preview shown here.</p>
+        <div class="hero-cta"><a class="btn btn-primary" href="./contact.html">Send us your idea</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-cream">
+    <div class="container">
+      <div class="split">
+        <div>
+          <span class="eyebrow">Custom sourcing</span>
+          <h2>Do not see the exact item? Send the idea.</h2>
+          <p>This catalog is only the starting point. DecoJolly can help buyers turn logos, sketches, city themes, resort concepts, museum references, and seasonal style boards into manufacturable products.</p>
+          <ul class="checklist">
+            <li>Custom ornament and souvenir development</li>
+            <li>Packaging, hangtag, insert card, and gift box support</li>
+            <li>Flexible MOQ and factory-direct quote direction by program</li>
+          </ul>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="./contact.html">Start a custom request</a>
           </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn primary"  href="/assets/docs/decojolly-product-catalog.pdf" target="_blank" rel="noopener">
-  Download Product Catalog (PDF)</a>
-            <a class="btn" href="mailto:info@decojolly.com?subject=Product%20Catalog%20-%20Quote%20Request">Request Quote</a>
-          </div>
+        </div>
+        <div class="split-media"><img src="./assets/images/featured/custom-design.jpg" alt="Custom seasonal product and packaging development" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-wrap">
+        <span class="eyebrow">By quote</span>
+        <h2>Building a seasonal program?</h2>
+        <p>Choose a product, send a brief, or request line sheets. We will reply with quote direction, MOQ, packaging options, and next steps.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="./contact.html">Request a Quote</a>
+          <a class="btn btn-ghost" href="./buyers.html">Buyer solutions</a>
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    <div class="wrap foot">
-      <div>© <span id="y"></span> DecoJolly. All rights reserved.</div>
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a href="index.html#contact">Contact</a>
-        <a href="/assets/docs/decojolly-product-catalog.pdf" target="_blank" rel="noopener">Catalog PDF</a>
-      </div>
+  <footer><div class="container"><div class="foot-grid">
+      <div><div class="foot-brand">DecoJolly<span class="since">SINCE 2011</span></div>
+        <p style="margin-top:14px;max-width:34ch;color:rgba(255,255,255,.6);font-size:14.5px;">U.S.-based holiday &amp; seasonal decor supply chain partner. Arizona, USA.</p></div>
+      <div class="foot-col"><h4>Explore</h4><a href="./buyers.html">Buyers</a><a href="./products.html">Products</a><a href="./gallery.html">Gallery</a><a href="./capabilities.html">Capabilities</a><a href="./suppliers.html">Suppliers</a><a href="./about.html">About</a></div>
+      <div class="foot-col"><h4>Get started</h4><a href="./contact.html">Request a Quote</a><a href="./contact.html#buyer-access">Apply for Buyer Access</a><a href="./suppliers.html">Become a Supplier Partner</a><a href="./products.html">Product Catalog</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="mailto:sales@decojolly.com">sales@decojolly.com</a><p>Arizona, USA</p></div>
     </div>
-  </footer>
-
+    <div class="foot-bottom"><div>© 2026 DecoJolly. All rights reserved.</div><div>Holiday &amp; seasonal decor · Sourced and delivered for retail buyers</div></div>
+  </div></footer>
   <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Filter + Search
-    const chips = Array.from(document.querySelectorAll('.chip'));
-    const cards = Array.from(document.querySelectorAll('.card'));
-    const search = document.getElementById('search');
-
-    let active = 'all';
-    let query = '';
-
-    function apply(){
-      const q = query.trim().toLowerCase();
-      cards.forEach(c=>{
-        const cat = c.dataset.cat;
-        const key = (c.dataset.key || '').toLowerCase();
-        const hitCat = (active === 'all') || (cat === active);
-        const hitQ = !q || key.includes(q);
-        c.style.display = (hitCat && hitQ) ? '' : 'none';
-      });
-    }
-
-    chips.forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        chips.forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
-        active = btn.dataset.filter;
-        apply();
-      });
-    });
-
-    search.addEventListener('input', (e)=>{
-      query = e.target.value || '';
-      apply();
-    });
+    (function(){var d=document.getElementById("drawer");var o=function(){d.classList.add("open");d.setAttribute("aria-hidden","false");};var c=function(){d.classList.remove("open");d.setAttribute("aria-hidden","true");};
+    var ob=document.getElementById("openMenu"),cb=document.getElementById("closeMenu");
+    if(ob)ob.addEventListener("click",o);if(cb)cb.addEventListener("click",c);
+    if(d)d.addEventListener("click",function(e){if(e.target===d)c();});
+    document.querySelectorAll(".drawerLink").forEach(function(a){a.addEventListener("click",c);});})();
   </script>
+  <script src="./assets/data/products.js"></script>
+  <script src="./assets/data/collections.js"></script>
+  <script src="./assets/js/quote-cart.js"></script>
+  <script src="./assets/js/collections.js"></script>
+  <script src="./assets/js/catalog.js"></script>
 </body>
 </html>

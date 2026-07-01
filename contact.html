@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Request a quote from DecoJolly. Tell us your category, style, and quantity and we'll prepare quote direction, line sheets, and samples — no public pricing, no pressure. U.S.-based, Arizona." />
+  <title>Request a Quote | DecoJolly — Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="canonical" href="https://www.decojolly.com/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DecoJolly" />
+  <meta property="og:title" content="Request a Quote | DecoJolly — Contact" />
+  <meta property="og:description" content="Request a quote from DecoJolly. Tell us your category, style, and quantity and we&#x27;ll prepare quote direction, line sheets, and samples — no public pricing, no pressure. U.S.-based, Arizona." />
+  <meta property="og:url" content="https://www.decojolly.com/contact.html" />
+  <meta property="og:image" content="https://www.decojolly.com/assets/images/brand/decojolly-logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Request a Quote | DecoJolly — Contact" />
+  <meta name="twitter:description" content="Request a quote from DecoJolly. Tell us your category, style, and quantity and we&#x27;ll prepare quote direction, line sheets, and samples — no public pricing, no pressure. U.S.-based, Arizona." />
+  <meta name="twitter:image" content="https://www.decojolly.com/assets/images/brand/decojolly-logo.png" />
+</head>
+
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header><div class="container"><div class="nav">
+        <a class="brand" href="./index.html" aria-label="DecoJolly home"><img src="./assets/images/brand/logo-header.png" alt="DecoJolly — since 2011" /></a>
+        <nav class="nav-links" aria-label="Primary"><a class="" href="./index.html">Home</a><a class="" href="./buyers.html">Buyers</a><a class="" href="./products.html">Products</a><a class="" href="./capabilities.html">Capabilities</a><a class="" href="./suppliers.html">Suppliers</a><a class="" href="./about.html">About</a></nav>
+        <div class="nav-actions">
+          <a class="btn btn-primary btn-sm" href="./contact.html">Request a Quote</a>
+          <button type="button" class="hamburger" id="openMenu" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </div></div></header>
+  <div class="drawer" id="drawer" aria-hidden="true"><div class="drawer-panel" role="dialog" aria-label="Menu">
+      <div class="drawer-head"><img src="./assets/images/brand/logo-header.png" alt="DecoJolly" /><button type="button" class="btn btn-ghost btn-sm" id="closeMenu">Close</button></div>
+      <div class="drawer-links"><a class="drawerLink" href="./index.html">Home</a><a class="drawerLink" href="./buyers.html">Buyers</a><a class="drawerLink" href="./products.html">Products</a><a class="drawerLink" href="./capabilities.html">Capabilities</a><a class="drawerLink" href="./suppliers.html">Suppliers</a><a class="drawerLink" href="./about.html">About</a><a class="drawerLink" href="./contact.html">Request a Quote</a></div>
+    </div></div>
+
+  <!-- Page hero -->
+  <a id="main" tabindex="-1"></a>
+  <section class="page-hero" id="buyer-access">
+    <div class="container">
+      <span class="eyebrow">Contact · Request a Quote</span>
+      <h1>Tell us what you're sourcing.</h1>
+      <p>Send your category, style, and rough quantity. We'll prepare quote direction, line sheets, MOQ, and samples for your program — no public pricing, no pressure.</p>
+    </div>
+  </section>
+
+  <!-- Form + details -->
+  <section class="sec-tight">
+    <div class="container">
+      <div class="split" style="align-items:flex-start;">
+        <!-- Form -->
+        <form class="form" id="quoteForm">
+          <div class="row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required placeholder="Your name" /></div>
+            <div class="field"><label for="company">Company</label><input id="company" name="company" type="text" placeholder="Company name" /></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@company.com" /></div>
+            <div class="field">
+              <label for="type">I am a</label>
+              <select id="type" name="type">
+                <option>Retailer</option>
+                <option>Showroom</option>
+                <option>Gift shop</option>
+                <option>Hotel / resort / hospitality</option>
+                <option>Museum / library / institution</option>
+                <option>Distributor</option>
+                <option>Supplier / manufacturer</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="category">Category of interest</label>
+              <select id="category" name="category">
+                <option>Christmas — glass figural ornaments</option>
+                <option>Christmas — glass balls &amp; boxed sets</option>
+                <option>Christmas — trees &amp; tabletop</option>
+                <option>Halloween collection</option>
+                <option>Easter — flocked foam</option>
+                <option>Tabletop &amp; giftables</option>
+                <option>Custom / private label</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field"><label for="qty">Estimated quantity</label><input id="qty" name="qty" type="text" placeholder="e.g. 500 units / per SKU" /></div>
+          </div>
+          <div class="quote-context" id="quoteContext" hidden></div>
+          <div class="field"><label for="message">What are you looking for?</label><textarea id="message" name="message" placeholder="Tell us about your season, style direction, packaging needs, or target timing."></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%;">Send request</button>
+          <p class="note">This opens your email app with the details filled in, addressed to sales@decojolly.com. Prefer to email directly? Write to <a href="mailto:sales@decojolly.com">sales@decojolly.com</a>.</p>
+        </form>
+
+        <!-- Details -->
+        <div>
+          <span class="eyebrow">Direct contact</span>
+          <h2 style="font-size:28px; font-weight:800; margin-top:12px;">Talk to a real person</h2>
+          <p style="color:var(--body); font-size:16px; line-height:1.6; margin-top:14px;">We reply during U.S. business hours, in clear English. No call centers, no overnight lag.</p>
+          <div class="panel" style="margin-top:24px;">
+            <p style="margin:0 0 4px; font-weight:700;">Email</p>
+            <p style="margin:0 0 18px;"><a href="mailto:sales@decojolly.com" style="color:var(--gold); font-weight:700;">sales@decojolly.com</a></p>
+            <p style="margin:0 0 4px; font-weight:700;">Location</p>
+            <p style="margin:0 0 18px; color:var(--body);">Arizona, USA · Factory-direct global sourcing</p>
+            <p style="margin:0 0 4px; font-weight:700;">Catalog</p>
+            <p style="margin:0; color:var(--body);"><a href="./products.html" style="color:var(--gold); font-weight:700;">View product catalog</a> · <a href="./assets/docs/decojolly-catalog.pdf" style="color:var(--gold); font-weight:700;" download>Download PDF</a></p>
+          </div>
+          <div class="panel-dark" style="margin-top:18px;">
+            <h3 style="font-size:19px;">Applying for buyer access?</h3>
+            <p>Mention your store or business in the message above. We'll share line sheets, MOQ, and case-pack details for your categories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="container"><div class="foot-grid">
+      <div><div class="foot-brand">DecoJolly<span class="since">SINCE 2011</span></div>
+        <p style="margin-top:14px;max-width:34ch;color:rgba(255,255,255,.6);font-size:14.5px;">U.S.-based holiday &amp; seasonal décor supply chain partner. Arizona, USA.</p></div>
+      <div class="foot-col"><h4>Explore</h4><a href="./buyers.html">Buyers</a><a href="./products.html">Products</a><a href="./gallery.html">Gallery</a><a href="./capabilities.html">Capabilities</a><a href="./suppliers.html">Suppliers</a><a href="./about.html">About</a></div>
+      <div class="foot-col"><h4>Get started</h4><a href="./contact.html">Request a Quote</a><a href="./contact.html#buyer-access">Apply for Buyer Access</a><a href="./suppliers.html">Become a Supplier Partner</a><a href="./products.html">Product Catalog</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="mailto:sales@decojolly.com">sales@decojolly.com</a><p>Arizona, USA</p></div>
+    </div>
+    <div class="foot-bottom"><div>© 2026 DecoJolly. All rights reserved.</div><div>Holiday &amp; seasonal décor · Sourced and delivered for retail buyers</div></div>
+  </div></footer>
+  <script>
+    (function(){var d=document.getElementById("drawer");var o=function(){d.classList.add("open");d.setAttribute("aria-hidden","false");};var c=function(){d.classList.remove("open");d.setAttribute("aria-hidden","true");};
+    var ob=document.getElementById("openMenu"),cb=document.getElementById("closeMenu");
+    if(ob)ob.addEventListener("click",o);if(cb)cb.addEventListener("click",c);
+    if(d)d.addEventListener("click",function(e){if(e.target===d)c();});
+    document.querySelectorAll(".drawerLink").forEach(function(a){a.addEventListener("click",c);});})();
+  </script>
+  <script src="./assets/data/products.js"></script>
+  <script src="./assets/js/quote-cart.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var productId = params.get("product");
+      var wantsQuoteList = params.get("quote") === "list";
+      var products = window.DECOJOLLY_PRODUCTS || [];
+      var items = [];
+
+      if (window.DecoJollyQuoteCart && wantsQuoteList) {
+        items = window.DecoJollyQuoteCart.getItems();
+      }
+
+      if (productId) {
+        var product = products.find(function (item) { return item.id === productId; });
+        if (product && !items.some(function (item) { return item.id === product.id; })) {
+          items.unshift(product);
+        }
+      }
+
+      if (!items.length) return;
+
+      var context = document.getElementById("quoteContext");
+      var message = document.getElementById("message");
+      var category = document.getElementById("category");
+
+      if (context) {
+        context.hidden = false;
+        context.innerHTML = [
+          '<b>' + (items.length > 1 ? 'Selected products:' : 'Selected product:') + '</b>',
+          '<div class="quote-context-list">',
+          items.map(function (item) {
+            return '<span>' + item.name + '</span><small>' + item.category + ' · ' + item.size + '</small>';
+          }).join(""),
+          '</div>'
+        ].join("");
+      }
+      if (category && items.length === 1) {
+        var wanted = items[0].category;
+        Array.prototype.forEach.call(category.options, function (option) {
+          if (option.textContent.toLowerCase().indexOf(wanted.toLowerCase().split(" ")[0]) !== -1) {
+            category.value = option.value;
+          }
+        });
+      }
+      if (message && !message.value) {
+        var lines = items.map(function (item, index) {
+          return [
+            (index + 1) + ". " + item.name,
+            "   Product ID: " + item.id,
+            "   Category: " + item.category,
+            "   Material: " + item.material,
+            "   Size: " + item.size,
+            "   Packaging: " + item.packaging
+          ].join("\n");
+        }).join("\n\n");
+        message.value =
+          "I am interested in the following DecoJolly product" + (items.length > 1 ? "s" : "") + ":\n\n" +
+          lines + "\n\n" +
+          "Please send quote direction, MOQ, packaging options, and available next steps.";
+      }
+    })();
+
+    document.getElementById("quoteForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = function (id) { return (document.getElementById(id).value || "").trim(); };
+      var subject = "Quote request — " + (v("company") || v("name") || "DecoJolly");
+      var body =
+        "Name: " + v("name") + "\n" +
+        "Company: " + v("company") + "\n" +
+        "Email: " + v("email") + "\n" +
+        "Buyer type: " + v("type") + "\n" +
+        "Category: " + v("category") + "\n" +
+        "Estimated quantity: " + v("qty") + "\n\n" +
+        "Details:\n" + v("message") + "\n";
+      window.location.href = "mailto:sales@decojolly.com?subject=" +
+        encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
