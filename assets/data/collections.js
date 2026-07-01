@@ -1,33 +1,193 @@
 window.DECOJOLLY_COLLECTIONS = [
   {
-    id: "christmas-glass-figural",
-    title: "Christmas Glass Figural Ornaments",
-    category: "Christmas Glass Figural Ornaments",
+    id: "christmas-characters",
+    title: "Christmas Characters",
+    category: "Christmas Characters",
     season: "Christmas",
-    image: "./assets/images/products/hero-christmas.jpg",
-    intro: "Hand-finished novelty and character ornaments for retailers, gift shops, museum shops, and destination programs.",
-    buyerFit: "Best for curated holiday walls, novelty ornament programs, destination assortments, and giftable seasonal displays.",
-    specs: ["Glass material", "Approx. 2.5 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization available"]
+    image: "./assets/images/catalog/christmas-characters/christmas-characters-001.jpg",
+    intro: "Christmas Characters from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building christmas characters assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
   },
   {
-    id: "glass-balls-boxed-sets",
-    title: "Glass Balls & Boxed Sets",
-    category: "Glass Balls & Boxed Sets",
+    id: "animal-ornaments",
+    title: "Animal Ornaments",
+    category: "Animal Ornaments",
     season: "Christmas",
-    image: "./assets/images/products/hero-balls.jpg",
-    intro: "Glass ball ornaments and boxed sets for core holiday programs, tree merchandising, and private-label seasonal assortments.",
-    buyerFit: "Best for retailers, showrooms, seasonal stores, and hospitality buyers who need classic holiday volume with packaging flexibility.",
-    specs: ["80 mm to 100 mm options", "PET box, window box, hangtag, and label options", "Gloss, matte, glitter, and pearlized finishes", "Private-label packaging by request"]
+    image: "./assets/images/catalog/animal-ornaments/animal-ornaments-001.jpg",
+    intro: "Animal Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building animal ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
   },
   {
-    id: "glass-trees-tabletop",
-    title: "Glass Trees & Tabletop Decor",
-    category: "Glass Trees & Tabletop Decor",
+    id: "ocean-marine",
+    title: "Ocean & Marine Ornaments",
+    category: "Ocean & Marine Ornaments",
     season: "Christmas",
-    image: "./assets/images/products/red-tree-votives.jpg",
-    intro: "Tabletop trees, votives, nutcrackers, and lighted glass decor for display-driven seasonal retail.",
-    buyerFit: "Best for home decor retailers, gift shops, showrooms, hotels, resorts, and buyers who need shelf-ready visual impact.",
-    specs: ["Glass tabletop decor", "Multiple height options", "Hangtag, label, closed box, or display packaging", "Color and assortment planning available"]
+    image: "./assets/images/catalog/ocean-marine/ocean-marine-001.jpg",
+    intro: "Ocean & Marine Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building ocean & marine ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "food-ornaments",
+    title: "Food Ornaments",
+    category: "Food Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/food-ornaments/food-ornaments-001.jpg",
+    intro: "Food Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building food ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "beverage-ornaments",
+    title: "Beverage Ornaments",
+    category: "Beverage Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/beverage-ornaments/beverage-ornaments-001.jpg",
+    intro: "Beverage Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building beverage ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "vegetable-botanical",
+    title: "Vegetable & Botanical Ornaments",
+    category: "Vegetable & Botanical Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/vegetable-botanical/vegetable-botanical-001.jpg",
+    intro: "Vegetable & Botanical Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building vegetable & botanical ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "traditional-christmas",
+    title: "Traditional Christmas Ornaments",
+    category: "Traditional Christmas Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/traditional-christmas/traditional-christmas-001.jpg",
+    intro: "Traditional Christmas Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building traditional christmas ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "buildings-destinations",
+    title: "Buildings & Destinations",
+    category: "Buildings & Destinations",
+    season: "Christmas",
+    image: "./assets/images/catalog/buildings-destinations/buildings-destinations-001.jpg",
+    intro: "Buildings & Destinations from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building buildings & destinations assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "vehicles-transportation",
+    title: "Vehicles & Transportation",
+    category: "Vehicles & Transportation",
+    season: "Christmas",
+    image: "./assets/images/catalog/vehicles-transportation/vehicles-transportation-001.jpg",
+    intro: "Vehicles & Transportation from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building vehicles & transportation assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "sports-ornaments",
+    title: "Sports Ornaments",
+    category: "Sports Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/sports-ornaments/sports-ornaments-001.jpg",
+    intro: "Sports Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building sports ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "musical-instruments",
+    title: "Musical Instrument Ornaments",
+    category: "Musical Instrument Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/musical-instruments/musical-instruments-001.jpg",
+    intro: "Musical Instrument Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building musical instrument ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "campus-souvenir",
+    title: "Campus & Souvenir Ornaments",
+    category: "Campus & Souvenir Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/campus-souvenir/campus-souvenir-001.jpg",
+    intro: "Campus & Souvenir Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building campus & souvenir ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "tools-fashion",
+    title: "Tools & Fashion Ornaments",
+    category: "Tools & Fashion Ornaments",
+    season: "Christmas",
+    image: "./assets/images/catalog/tools-fashion/tools-fashion-001.jpg",
+    intro: "Tools & Fashion Ornaments from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building tools & fashion ornaments assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "novelty-shapes",
+    title: "Novelty & Special Shapes",
+    category: "Novelty & Special Shapes",
+    season: "Christmas",
+    image: "./assets/images/catalog/novelty-shapes/novelty-shapes-001.jpg",
+    intro: "Novelty & Special Shapes from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building novelty & special shapes assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "glass-figurines",
+    title: "Glass Figurines",
+    category: "Glass Figurines",
+    season: "Christmas",
+    image: "./assets/images/catalog/glass-figurines/glass-figurines-001.jpg",
+    intro: "Glass Figurines from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building glass figurines assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Hand-finished glass ornaments", "Approx. 2.5 in to 4 in typical size", "Hangtag, label, or PET box options", "Color and packaging customization by program"]
+  },
+  {
+    id: "glass-balls-boxed",
+    title: "Glass Ball Ornaments — Boxed Sets",
+    category: "Glass Ball Ornaments — Boxed Sets",
+    season: "Christmas",
+    image: "./assets/images/catalog/glass-balls-boxed/glass-balls-boxed-001.jpg",
+    intro: "Glass Ball Ornaments — Boxed Sets from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building glass ball ornaments — boxed sets assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Glass or plastic ball options", "80 mm to 100 mm sizes", "Boxed set, window box, or hangtag options", "Color, finish, and print customization"]
+  },
+  {
+    id: "glass-balls-singles",
+    title: "Glass Ball Ornaments — Singles",
+    category: "Glass Ball Ornaments — Singles",
+    season: "Christmas",
+    image: "./assets/images/catalog/glass-balls-singles/glass-balls-singles-001.jpg",
+    intro: "Glass Ball Ornaments — Singles from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building glass ball ornaments — singles assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Glass or plastic ball options", "80 mm to 100 mm sizes", "Boxed set, window box, or hangtag options", "Color, finish, and print customization"]
+  },
+  {
+    id: "plastic-balls-boxed",
+    title: "Plastic Ball Ornaments — Boxed Sets",
+    category: "Plastic Ball Ornaments — Boxed Sets",
+    season: "Christmas",
+    image: "./assets/images/catalog/plastic-balls-boxed/plastic-balls-boxed-001.jpg",
+    intro: "Plastic Ball Ornaments — Boxed Sets from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building plastic ball ornaments — boxed sets assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Glass or plastic ball options", "80 mm to 100 mm sizes", "Boxed set, window box, or hangtag options", "Color, finish, and print customization"]
+  },
+  {
+    id: "plastic-balls-singles",
+    title: "Plastic Ball Ornaments — Singles & Garlands",
+    category: "Plastic Ball Ornaments — Singles & Garlands",
+    season: "Christmas",
+    image: "./assets/images/catalog/plastic-balls-singles/plastic-balls-singles-001.jpg",
+    intro: "Plastic Ball Ornaments — Singles & Garlands from the DecoJolly Christmas 2026 collection — hand-finished pieces for retailers, gift shops, museum shops, and seasonal programs.",
+    buyerFit: "Best for buyers building plastic ball ornaments — singles & garlands assortments, novelty ornament walls, destination displays, and giftable seasonal sets.",
+    specs: ["Glass or plastic ball options", "80 mm to 100 mm sizes", "Boxed set, window box, or hangtag options", "Color, finish, and print customization"]
   },
   {
     id: "halloween-collection",
