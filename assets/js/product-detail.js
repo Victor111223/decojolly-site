@@ -104,7 +104,8 @@
     '<div class="container">',
     '<div class="head"><span class="eyebrow">Related products</span><h2>More in this direction</h2><p>Use these as a starting point. If you need a different theme, logo, destination, or package, send us the idea and we can help develop it.</p></div>',
     '<div class="product-grid compact">' + relatedProducts.map(function (item) {
-      return '<article class="product-card"><a class="product-card-media" href="./product.html?id=' + encodeURIComponent(item.id) + '"><img src="' + item.image + '" loading="lazy" alt="' + item.name.replace(/"/g, "&quot;") + '"></a><div class="product-card-body"><div class="product-kicker">' + item.season + " · " + item.material + '</div><h3><a href="./product.html?id=' + encodeURIComponent(item.id) + '">' + item.name + '</a></h3><p>' + item.description + '</p><div class="product-card-actions"><a class="btn btn-primary btn-sm" href="./product.html?id=' + encodeURIComponent(item.id) + '">View details</a></div></div></article>';
+      var rhref = "./product.html?id=" + encodeURIComponent(item.id);
+      return '<article class="product-card"><a class="product-card-media" href="' + rhref + '"><img src="' + item.image + '" loading="lazy" alt="' + item.name.replace(/"/g, "&quot;") + '"></a><a class="product-card-body" href="' + rhref + '"><div class="product-kicker">' + item.season + " · " + item.material + '</div><h3>' + item.name + '</h3></a></article>';
     }).join("") + "</div>",
     "</div>",
     "</section>"

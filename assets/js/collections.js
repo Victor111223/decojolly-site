@@ -9,24 +9,18 @@
   }
 
   function productCard(product) {
+    var href = "./product.html?id=" + encodeURIComponent(product.id);
+    var safe = product.name.replace(/"/g, "&quot;");
     return [
       '<article class="product-card">',
-      '<a class="product-card-media" href="./product.html?id=' + encodeURIComponent(product.id) + '">',
-      '<img src="' + product.image + '" loading="lazy" alt="' + product.name.replace(/"/g, "&quot;") + '">',
+      '<a class="product-card-media" href="' + href + '">',
+      '<img src="' + product.image + '" loading="lazy" alt="' + safe + '">',
+      '<button class="quote-mini" type="button" data-quote-add="' + product.id + '" data-default-label="+ Quote" aria-label="Add ' + safe + ' to quote">+ Quote</button>',
       "</a>",
-      '<div class="product-card-body">',
+      '<a class="product-card-body" href="' + href + '">',
       '<div class="product-kicker">' + product.season + " · " + product.material + "</div>",
-      '<h3><a href="./product.html?id=' + encodeURIComponent(product.id) + '">' + product.name + "</a></h3>",
-      '<p>' + product.description + "</p>",
-      '<dl class="mini-specs">',
-      "<div><dt>Size</dt><dd>" + product.size + "</dd></div>",
-      "<div><dt>Packaging</dt><dd>" + product.packaging + "</dd></div>",
-      "</dl>",
-      '<div class="product-card-actions">',
-      '<a class="btn btn-primary btn-sm" href="./product.html?id=' + encodeURIComponent(product.id) + '">View details</a>',
-      '<button class="btn btn-ghost btn-sm" type="button" data-quote-add="' + product.id + '" data-default-label="Add to Quote">Add to Quote</button>',
-      "</div>",
-      "</div>",
+      '<h3>' + product.name + "</h3>",
+      "</a>",
       "</article>"
     ].join("");
   }
