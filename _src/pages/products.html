@@ -1,0 +1,33 @@
+<!--meta
+title: Wholesale Christmas Ornament Catalog | DecoJolly
+description: Browse 1,524 glass ornaments, glass balls, garlands, tabletop glass and Easter and Halloween décor. Add designs to a quote list and send it in one click.
+page: products
+scripts: data:products, catalog-info, catalog
+-->
+<main id="main">
+  <div id="catalog">
+    <section class="page-head band">
+      <div class="wrap">
+        <h1>Catalog</h1>
+        <p class="lead">Every design is made in our own factories. Pricing is by quote: add what you like to your quote list and send it.</p>
+        <label class="search" for="search"><span class="sr">Search the catalog</span>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="search" type="search" placeholder="Search: santa, pickle, gold ball, camper" autocomplete="off">
+        </label>
+      </div>
+    </section>
+    <div class="wrap filters">
+      <div class="chips" id="groups" role="group" aria-label="Product groups"></div>
+      <div class="chips" id="cats" role="group" aria-label="Collections" hidden></div>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+    <div class="wrap">
+      <ul class="cards" id="grid"></ul>
+      <div class="empty" id="empty" hidden>
+        <p>No products match that search. Try a simpler word, or send us a description and we’ll tell you if we make it.</p>
+        <p><button type="button" class="link" id="reset">Clear the search</button> or <a class="link" href="./contact.html">describe what you need</a></p>
+      </div>
+      <p class="more-wrap"><button type="button" class="tag" id="more" hidden>Show more</button></p>
+    </div>
+  </div>
+</main>

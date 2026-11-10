@@ -1,0 +1,103 @@
+{
+ "hero": [
+  {
+   "id": "glass-balls-singles-164",
+   "label": "Red glass ball with gold poinsettia",
+   "x": 6,
+   "drop": 5,
+   "w": 12,
+   "xm": 13,
+   "dropm": 4,
+   "wm": 22
+  },
+  {
+   "id": "christmas-characters-068",
+   "label": "Nutcracker king",
+   "x": 19.5,
+   "drop": 13,
+   "w": 8.6,
+   "xm": 37,
+   "dropm": 9,
+   "wm": 16
+  },
+  {
+   "id": "food-ornaments-072",
+   "label": "Yellow mustard bottle",
+   "x": 32.5,
+   "drop": 2,
+   "w": 8.2
+  },
+  {
+   "id": "buildings-destinations-010",
+   "label": "Gingerbread house with mint roof",
+   "x": 46,
+   "drop": 17,
+   "w": 11.4
+  },
+  {
+   "id": "christmas-characters-053",
+   "label": "Santa with wreath and tree",
+   "x": 60,
+   "drop": 3,
+   "w": 12.6,
+   "xm": 62,
+   "dropm": 3,
+   "wm": 24
+  },
+  {
+   "id": "ocean-marine-001",
+   "label": "Kissing fish",
+   "x": 74.5,
+   "drop": 20,
+   "w": 10.2
+  },
+  {
+   "id": "glass-balls-singles-104",
+   "label": "Gold glass ball with holly berries",
+   "x": 89,
+   "drop": 6,
+   "w": 12,
+   "xm": 87,
+   "dropm": 13,
+   "wm": 21
+  }
+ ],
+ "tiles": [
+  {
+   "id": "christmas-characters-150",
+   "href": "./products.html?group=figural",
+   "name": "Figural glass ornaments",
+   "n": "1,056 designs"
+  },
+  {
+   "id": "glass-balls-singles-104",
+   "href": "./products.html?group=glass-balls",
+   "name": "Glass balls and boxed sets",
+   "n": "266 designs"
+  },
+  {
+   "id": "plastic-balls-singles-015",
+   "href": "./products.html?group=plastic",
+   "name": "Plastic balls and garlands",
+   "n": "75 designs"
+  },
+  {
+   "id": "glass-figurines-014",
+   "href": "./products.html?group=tabletop",
+   "name": "Tabletop glass trees and votives",
+   "n": "50 designs"
+  },
+  {
+   "id": "easter-028",
+   "href": "./products.html?group=seasonal",
+   "name": "Easter and Halloween",
+   "n": "71 designs"
+  },
+  {
+   "id": "vehicles-transportation-055",
+   "href": "./custom.html",
+   "name": "Custom and private label",
+   "n": "Your design"
+  }
+ ]
+}

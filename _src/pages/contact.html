@@ -1,0 +1,53 @@
+<!--meta
+title: Contact DecoJolly | Wholesale Holiday Décor
+description: Contact DecoJolly about wholesale ornaments, custom orders or a price check. Email sales@decojolly.com. We reply during U.S. business hours.
+page: contact
+scripts: contact
+-->
+<main id="main">
+  <section class="page-head band">
+    <div class="wrap">
+      <h1>Contact us</h1>
+      <p class="lead">Questions, custom orders, or anything else. We reply during U.S. business hours.</p>
+    </div>
+  </section>
+  <div class="wrap contact">
+    <div class="contact-form" data-contact-view="form">
+      <form class="q-form" id="c-form" novalidate>
+        <label for="c-type">What is this about?
+          <select id="c-type" name="topic">
+            <option value="question">A question about products or ordering</option>
+            <option value="custom">A custom or private-label order</option>
+            <option value="price">A price check</option>
+            <option value="other">Something else</option>
+          </select>
+        </label>
+        <div class="q-row">
+          <label for="c-name">Your name<input id="c-name" name="name" autocomplete="name" required></label>
+          <label for="c-company">Company or store<input id="c-company" name="company" autocomplete="organization"></label>
+        </div>
+        <div class="q-row">
+          <label for="c-email">Email<input id="c-email" name="email" type="email" autocomplete="email" required></label>
+          <label for="c-phone">Phone (optional)<input id="c-phone" name="phone" type="tel" autocomplete="tel"></label>
+        </div>
+        <label for="c-msg">Message<textarea id="c-msg" name="message" rows="6" required placeholder="What you need, rough quantities, and when you need it"></textarea></label>
+        <label class="q-trap" aria-hidden="true">Leave this empty<input name="botcheck" tabindex="-1" autocomplete="off"></label>
+        <p class="q-error" id="c-error" role="alert" hidden></p>
+        <button class="tag" type="submit" id="c-send">Send message</button>
+      </form>
+    </div>
+    <div class="contact-form q-done" data-contact-view="done" hidden>
+      <h2>Message sent</h2>
+      <p id="c-done-text"></p>
+      <a class="link" href="./products.html">Browse the catalog</a>
+    </div>
+    <aside class="contact-side">
+      <h2>Email</h2>
+      <p class="select">sales@decojolly.com</p>
+      <h2>Where we are</h2>
+      <p>Arizona, USA</p>
+      <h2>Ordering products?</h2>
+      <p>Add them to your <button type="button" class="link" data-quote-open>quote list</button> and send it from there. We’ll see exactly which items you mean.</p>
+    </aside>
+  </div>
+</main>

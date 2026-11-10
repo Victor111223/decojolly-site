@@ -1,0 +1,120 @@
+<footer class="foot">
+  <div class="foot-in">
+    <div class="foot-brand">
+      <img src="./assets/images/brand/logo-white.png" width="766" height="395" alt="DecoJolly, since 2011" loading="lazy">
+      <p>Holiday and seasonal décor made in our own factories. Based in Arizona.</p>
+    </div>
+    <nav class="foot-col" aria-label="Catalog">
+      <h2>Catalog</h2>
+      <a href="./products.html">All products</a>
+      <a href="./products.html?season=Christmas">Christmas</a>
+      <a href="./products.html?season=Halloween">Halloween</a>
+      <a href="./products.html?season=Easter">Easter</a>
+      <a href="./assets/docs/decojolly-catalog.pdf">Catalog PDF</a>
+    </nav>
+    <nav class="foot-col" aria-label="Company">
+      <h2>Company</h2>
+      <a href="./how-to-order.html">How to order</a>
+      <a href="./custom.html">Custom and private label</a>
+      <a href="./about.html">About</a>
+    </nav>
+    <div class="foot-col">
+      <h2>Talk to us</h2>
+      <a href="mailto:sales@decojolly.com">sales@decojolly.com</a>
+      <a href="./contact.html">Contact form</a>
+      <button type="button" class="foot-btn" data-price-open>Compare your price</button>
+      <p>Arizona, USA</p>
+    </div>
+  </div>
+  <p class="foot-legal">© <span data-year>2026</span> DecoJolly. All rights reserved.</p>
+</footer>
+
+<dialog class="drawer" id="quote" aria-labelledby="quote-title">
+  <div class="drawer-head">
+    <h2 id="quote-title">Quote list</h2>
+    <button type="button" class="drawer-x" data-quote-close aria-label="Close quote list"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+
+  <div class="drawer-body" data-quote-view="list">
+    <ul class="q-items" id="q-items"></ul>
+    <div class="q-empty" id="q-empty">
+      <p>Nothing on your list yet. Add designs from the catalog and they'll show up here.</p>
+      <a class="link" href="./products.html">Browse the catalog</a>
+    </div>
+
+    <form class="q-form" id="q-form" novalidate>
+      <h3>Where should we send your quote?</h3>
+      <div class="q-row">
+        <label for="q-name">Your name<input id="q-name" name="name" autocomplete="name" required></label>
+        <label for="q-company">Company or store<input id="q-company" name="company" autocomplete="organization" required></label>
+      </div>
+      <div class="q-row">
+        <label for="q-email">Email<input id="q-email" name="email" type="email" autocomplete="email" required></label>
+        <label for="q-phone">Phone (optional)<input id="q-phone" name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <div class="q-row">
+        <label for="q-type">Type of business
+          <select id="q-type" name="type">
+            <option>Gift shop or retailer</option>
+            <option>Showroom</option>
+            <option>Hotel or resort</option>
+            <option>Museum or library shop</option>
+            <option>Campus store</option>
+            <option>Distributor</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label for="q-when">Need it by (optional)<input id="q-when" name="when" placeholder="October 2027"></label>
+      </div>
+      <label for="q-note">Anything else? (optional)<textarea id="q-note" name="note" rows="3" placeholder="Packaging, colors, your logo, budget"></textarea></label>
+      <label class="q-trap" aria-hidden="true">Leave this empty<input name="botcheck" tabindex="-1" autocomplete="off"></label>
+      <p class="q-error" id="q-error" role="alert" hidden></p>
+      <button class="tag" type="submit" id="q-send">Send quote request</button>
+      <p class="q-small">Goes straight to our sales team. We reply during U.S. business hours.</p>
+    </form>
+  </div>
+
+  <div class="drawer-body q-done" data-quote-view="done" hidden>
+    <h3>Quote request sent</h3>
+    <p id="q-done-text"></p>
+    <p class="q-ref">Reference <b id="q-ref"></b></p>
+    <button type="button" class="link" data-quote-close>Back to the site</button>
+  </div>
+</dialog>
+<dialog class="drawer" id="price" aria-labelledby="price-title">
+  <div class="drawer-head">
+    <h2 id="price-title">Get a factory price</h2>
+    <button type="button" class="drawer-x" data-price-close aria-label="Close"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  </div>
+  <div class="drawer-body" data-price-view="form">
+    <p class="p-lead">Tell us one product you buy today and what you pay. We’ll quote the same kind of item from our own factory, delivered to your door.</p>
+    <form class="q-form" id="p-form" novalidate>
+      <label for="p-item">What do you buy today?<input id="p-item" name="product" required placeholder="3 in glass pickle ornament"></label>
+      <div class="q-row">
+        <label for="p-price">What you pay per piece<input id="p-price" name="price" required inputmode="decimal" placeholder="$4.50"></label>
+        <label for="p-qty">How many per order (optional)<input id="p-qty" name="qty" inputmode="numeric" placeholder="600"></label>
+      </div>
+      <label for="p-link">Link or item number (optional)<input id="p-link" name="link" placeholder="Paste a link to the product"></label>
+      <div class="q-row">
+        <label for="p-email">Email<input id="p-email" name="email" type="email" autocomplete="email" required></label>
+        <label for="p-company">Company or store (optional)<input id="p-company" name="company" autocomplete="organization"></label>
+      </div>
+      <label class="q-trap" aria-hidden="true">Leave this empty<input name="botcheck" tabindex="-1" autocomplete="off"></label>
+      <p class="q-error" id="p-error" role="alert" hidden></p>
+      <button class="tag" type="submit" id="p-send">Get my factory price</button>
+      <p class="q-small">Goes straight to our sales team. We reply during U.S. business hours.</p>
+    </form>
+  </div>
+  <div class="drawer-body q-done" data-price-view="done" hidden>
+    <h3>Price check sent</h3>
+    <p id="p-done-text"></p>
+    <button type="button" class="link" data-price-close>Back to the site</button>
+  </div>
+</dialog>
+<aside class="nudge" id="nudge" aria-label="Price check" hidden>
+  <button type="button" class="nudge-x" data-nudge-close aria-label="Dismiss"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+  <p class="nudge-h">Send us your price. We’ll send you ours.</p>
+  <p>Tell us what you pay for one product. We’ll quote it factory-direct.</p>
+  <button type="button" class="tag tag-sm" data-price-open>Get my factory price</button>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
