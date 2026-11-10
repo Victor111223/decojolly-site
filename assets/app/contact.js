@@ -29,7 +29,7 @@
     var topic = d.topic.options[d.topic.selectedIndex].text;
     DJ.send({ subject: topic + ": " + (d.company.value.trim() || d.name.value.trim()), replyto: email, topic: topic, name: d.name.value.trim(), company: d.company.value.trim(), email: email, phone: d.phone.value.trim(), message: d.message.value.trim() })
       .then(function () {
-        document.getElementById("c-done-text").textContent = "We’ll reply to " + email + " during U.S. business hours.";
+        document.getElementById("c-done-text").textContent = "We’ll reply to " + email + " soon.";
         document.querySelector('[data-contact-view="form"]').hidden = true;
         document.querySelector('[data-contact-view="done"]').hidden = false;
       })

@@ -48,6 +48,7 @@ function page(file) {
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="./assets/images/brand/favicon.png">
 <link rel="preload" href="./assets/app/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/app/fonts/young-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./assets/app/app.css">`;
   const header = read("partials/header.html").replace(`data-nav="${meta.page}"`, `data-nav="${meta.page}" aria-current="page"`);
   const body = `${header}\n${src}\n${read("partials/footer.html")}\n<script src="./assets/app/app.js"></script>\n${scripts}`;

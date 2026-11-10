@@ -127,7 +127,7 @@
     }).join("\n\n");
   }
   function done(ref, email) {
-    $("#q-done-text").textContent = "We got your list of " + memory.length + (memory.length === 1 ? " design" : " designs") + " and will reply to " + email + " during U.S. business hours.";
+    $("#q-done-text").textContent = "We got your list of " + memory.length + (memory.length === 1 ? " design" : " designs") + " and will reply to " + email + " soon.";
     $("#q-ref").textContent = ref;
     view("done");
     write([]);
@@ -254,7 +254,7 @@
         .then(function (r) { return r.json(); })
         .then(function (r) {
           if (!r.success) throw new Error(r.message || "rejected");
-          $("#p-done-text").textContent = "We’ll reply to " + email + " with our delivered price during U.S. business hours.";
+          $("#p-done-text").textContent = "We’ll reply to " + email + " with our delivered price soon.";
           pview("done");
           pform.reset();
         })
